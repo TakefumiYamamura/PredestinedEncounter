@@ -7,6 +7,7 @@ target 'PredestinedEncounter' do
  pod 'libPusher'
  pod 'Alamofire'
  pod 'SwiftyJSON'
+ pod 'JSQMessagesViewController'
 end
 
 target 'PredestinedEncounterTests' do

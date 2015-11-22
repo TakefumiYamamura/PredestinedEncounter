@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF13C32D0FC41ED762E8FDCB /* Pods_PredestinedEncounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D730AB85ACACBD4AF6BA854 /* Pods_PredestinedEncounter.framework */; };
+		E73A56E91C017E3C0005EA9B /* cute_girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E73A56E81C017E3C0005EA9B /* cute_girl.jpg */; };
+		E73A56EB1C017E480005EA9B /* yamamura.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E73A56EA1C017E480005EA9B /* yamamura.jpg */; };
 		E7698CA01C00D7F100AB7FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7698C9F1C00D7F100AB7FB7 /* AppDelegate.swift */; };
 		E7698CA21C00D7F100AB7FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7698CA11C00D7F100AB7FB7 /* ViewController.swift */; };
 		E7698CA51C00D7F100AB7FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7698CA31C00D7F100AB7FB7 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		5A2B401C9335000943CE824D /* Pods-PredestinedEncounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PredestinedEncounter.release.xcconfig"; path = "Pods/Target Support Files/Pods-PredestinedEncounter/Pods-PredestinedEncounter.release.xcconfig"; sourceTree = "<group>"; };
 		6D730AB85ACACBD4AF6BA854 /* Pods_PredestinedEncounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PredestinedEncounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52664EB998D3A3CDEE895B4 /* Pods-PredestinedEncounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PredestinedEncounter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PredestinedEncounter/Pods-PredestinedEncounter.debug.xcconfig"; sourceTree = "<group>"; };
+		E73A56E81C017E3C0005EA9B /* cute_girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cute_girl.jpg; path = ../../Documents/cute_girl.jpg; sourceTree = "<group>"; };
+		E73A56EA1C017E480005EA9B /* yamamura.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = yamamura.jpg; path = ../../Documents/yamamura.jpg; sourceTree = "<group>"; };
 		E7698C9C1C00D7F100AB7FB7 /* PredestinedEncounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PredestinedEncounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7698C9F1C00D7F100AB7FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7698CA11C00D7F100AB7FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E73A56E71C017D6F0005EA9B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E73A56EA1C017E480005EA9B /* yamamura.jpg */,
+				E73A56E81C017E3C0005EA9B /* cute_girl.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		E7698C931C00D7F100AB7FB7 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				E7698C9F1C00D7F100AB7FB7 /* AppDelegate.swift */,
+				E73A56E71C017D6F0005EA9B /* images */,
 				E7698CA11C00D7F100AB7FB7 /* ViewController.swift */,
 				E7698CA31C00D7F100AB7FB7 /* Main.storyboard */,
 				E7698CA61C00D7F100AB7FB7 /* Assets.xcassets */,
@@ -257,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7698CAA1C00D7F100AB7FB7 /* LaunchScreen.storyboard in Resources */,
+				E73A56EB1C017E480005EA9B /* yamamura.jpg in Resources */,
 				E7698CA71C00D7F100AB7FB7 /* Assets.xcassets in Resources */,
+				E73A56E91C017E3C0005EA9B /* cute_girl.jpg in Resources */,
 				E7698CA51C00D7F100AB7FB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

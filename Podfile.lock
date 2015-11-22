@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (3.1.2)
+  - JSQMessagesViewController (7.2.0):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - libPusher (1.6.1):
     - libPusher/Core (= 1.6.1)
   - libPusher/Core (1.6.1):
@@ -9,11 +12,14 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - JSQMessagesViewController
   - libPusher
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
+  JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   libPusher: 5ea58aeb83fa4ac1f5d8ef8543b1def6ace997b8
   SocketRocket: ee0b5c34182d37bb4f1f8d628bbe737718126daa
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
