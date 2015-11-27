@@ -7,6 +7,7 @@ PODS:
     - libPusher/Core (= 1.6.1)
   - libPusher/Core (1.6.1):
     - SocketRocket (= 0.4.1)
+  - MDCSwipeToChoose (0.2.3)
   - SocketRocket (0.4.1)
   - SwiftyJSON (2.3.1)
 
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - Alamofire
   - JSQMessagesViewController
   - libPusher
+  - MDCSwipeToChoose
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -21,6 +23,7 @@ SPEC CHECKSUMS:
   JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   libPusher: 5ea58aeb83fa4ac1f5d8ef8543b1def6ace997b8
+  MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
   SocketRocket: ee0b5c34182d37bb4f1f8d628bbe737718126daa
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
 

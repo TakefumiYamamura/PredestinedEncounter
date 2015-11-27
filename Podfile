@@ -8,6 +8,7 @@ target 'PredestinedEncounter' do
  pod 'Alamofire'
  pod 'SwiftyJSON'
  pod 'JSQMessagesViewController'
+ pod "MDCSwipeToChoose"
 end
 
 target 'PredestinedEncounterTests' do
