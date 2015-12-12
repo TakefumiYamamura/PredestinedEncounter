@@ -10,9 +10,15 @@ import UIKit
 import Parse
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var loginView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let coverView = UIView()
+        coverView.frame = CGRectMake(0, 0, view.frame.width, view.frame.height)
+        coverView.backgroundColor = UIColor.blackColor()
+        coverView.alpha = 0.2
+        loginView.addSubview(coverView)
 
         // Do any additional setup after loading the view.
     }
