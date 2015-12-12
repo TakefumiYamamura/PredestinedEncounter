@@ -44,6 +44,8 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         options.onPan = { state -> Void in
             if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Left {
                 print("Photo deleted!")
+            } else if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Right {
+                print("Photo saved!")
             }
         }
         
@@ -52,6 +54,23 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         view.frame = CGRectMake(10, 100, self.view.frame.width - 20, self.view.frame.height - 250)
         view.frame.height
         self.view.addSubview(view)
+        
+        let likeButton = UIButton()
+        let nopeButton = UIButton()
+        likeButton.setImage(UIImage(named: "like47.png"), forState: .Normal)
+        nopeButton.setImage(UIImage(named: "close33.png"), forState: .Normal)
+        
+        likeButton.frame.size = CGSize(width: 70, height: 70)
+        likeButton.center = CGPoint(x: self.view.center.x + 70, y: self.view.frame.height - 70)
+        
+        nopeButton.frame.size = CGSize(width: 70, height: 70)
+        nopeButton.center = CGPoint(x: self.view.center.x - 70, y: self.view.frame.height - 70)
+        
+        
+        
+//        nopeButton.frame = CGRectMake(self.view.center.x-30, self.view.frame.height - 30, 50, 50)
+        self.view.addSubview(likeButton)
+        self.view.addSubview(nopeButton)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -68,7 +87,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
     
     // Sent before a choice is made. Cancel the choice by returning `false`. Otherwise return `true`.
     func view(view: UIView, shouldBeChosenWithDirection: MDCSwipeDirection) -> Bool{
-        if (shouldBeChosenWithDirection == MDCSwipeDirection.Left) {
+        if (shouldBeChosenWithDirection == MDCSwipeDirection.Left || shouldBeChosenWithDirection == MDCSwipeDirection.Right ) {
             return true;
         } else {
             // Snap the view back and cancel the choice.
@@ -84,7 +103,8 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
     func view(view: UIView, wasChosenWithDirection: MDCSwipeDirection) -> Void{
         if wasChosenWithDirection == MDCSwipeDirection.Left {
             print("Photo deleted!")
-        }else{
+        }
+        if wasChosenWithDirection == MDCSwipeDirection.Right {
             print("Photo saved!")
         }
     }
