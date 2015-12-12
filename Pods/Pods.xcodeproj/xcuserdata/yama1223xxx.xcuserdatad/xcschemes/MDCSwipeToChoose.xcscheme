@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CD3CF9E6FF0345F013A2FE66'
+               BlueprintIdentifier = '29834321F767871820FEBD8B'
                BlueprintName = 'MDCSwipeToChoose'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'MDCSwipeToChoose.framework'>

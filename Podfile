@@ -9,6 +9,7 @@ target 'PredestinedEncounter' do
  pod 'SwiftyJSON'
  pod 'JSQMessagesViewController'
  pod "MDCSwipeToChoose"
+ pod 'Parse'
 end
 
 target 'PredestinedEncounterTests' do

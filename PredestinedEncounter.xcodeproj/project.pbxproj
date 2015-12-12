@@ -18,6 +18,7 @@
 		E7698CAA1C00D7F100AB7FB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7698CA81C00D7F100AB7FB7 /* LaunchScreen.storyboard */; };
 		E7698CB51C00D7F100AB7FB7 /* PredestinedEncounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7698CB41C00D7F100AB7FB7 /* PredestinedEncounterTests.swift */; };
 		E7698CC01C00D7F200AB7FB7 /* PredestinedEncounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7698CBF1C00D7F200AB7FB7 /* PredestinedEncounterUITests.swift */; };
+		E76C44471C1C0D380023237A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C44461C1C0D380023237A /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		E7698CBB1C00D7F200AB7FB7 /* PredestinedEncounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PredestinedEncounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7698CBF1C00D7F200AB7FB7 /* PredestinedEncounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredestinedEncounterUITests.swift; sourceTree = "<group>"; };
 		E7698CC11C00D7F200AB7FB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E76C44461C1C0D380023237A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				E7698CA11C00D7F100AB7FB7 /* ViewController.swift */,
+				E76C44461C1C0D380023237A /* LoginViewController.swift */,
 				E73CC8761C0838B5001373D0 /* SwipeViewController.swift */,
 			);
 			name = ViewController;
@@ -376,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76C44471C1C0D380023237A /* LoginViewController.swift in Sources */,
 				E7698CA21C00D7F100AB7FB7 /* ViewController.swift in Sources */,
 				E7698CA01C00D7F100AB7FB7 /* AppDelegate.swift in Sources */,
 				E73CC8771C0838B5001373D0 /* SwipeViewController.swift in Sources */,

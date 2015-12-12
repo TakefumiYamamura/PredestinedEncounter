@@ -8,6 +8,7 @@
 
 import UIKit
 import MDCSwipeToChoose
+import Parse
 
 class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
 

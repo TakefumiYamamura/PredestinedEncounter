@@ -11,6 +11,7 @@ import Pusher
 import Alamofire
 import SwiftyJSON
 import JSQMessagesViewController
+import Parse
 
 class ViewController: JSQMessagesViewController, PTPusherDelegate  {
     var client: PTPusher!
