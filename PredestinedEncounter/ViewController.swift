@@ -12,6 +12,8 @@ import Alamofire
 import SwiftyJSON
 import JSQMessagesViewController
 import Parse
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class ViewController: JSQMessagesViewController, PTPusherDelegate  {
     var client: PTPusher!

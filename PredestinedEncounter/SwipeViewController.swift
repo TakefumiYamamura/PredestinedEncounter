@@ -9,6 +9,8 @@
 import UIKit
 import MDCSwipeToChoose
 import Parse
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
 

@@ -8,6 +8,9 @@
 
 import UIKit
 import Parse
+import FBSDKCoreKit
+import FBSDKLoginKit
+
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginView: UIImageView!
