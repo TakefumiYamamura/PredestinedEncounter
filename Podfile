@@ -10,6 +10,10 @@ target 'PredestinedEncounter' do
  pod 'JSQMessagesViewController'
  pod "MDCSwipeToChoose"
  pod 'Parse'
+ pod 'FBSDKCoreKit'
+ pod 'FBSDKLoginKit'
+ pod 'FBSDKShareKit'
+
 end
 
 target 'PredestinedEncounterTests' do

@@ -86,6 +86,9 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PredestinedEncounter/Alamofire.framework"
   install_framework "Pods-PredestinedEncounter/Bolts.framework"
+  install_framework "Pods-PredestinedEncounter/FBSDKCoreKit.framework"
+  install_framework "Pods-PredestinedEncounter/FBSDKLoginKit.framework"
+  install_framework "Pods-PredestinedEncounter/FBSDKShareKit.framework"
   install_framework "Pods-PredestinedEncounter/JSQMessagesViewController.framework"
   install_framework "Pods-PredestinedEncounter/JSQSystemSoundPlayer.framework"
   install_framework "Pods-PredestinedEncounter/MDCSwipeToChoose.framework"
@@ -97,6 +100,9 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PredestinedEncounter/Alamofire.framework"
   install_framework "Pods-PredestinedEncounter/Bolts.framework"
+  install_framework "Pods-PredestinedEncounter/FBSDKCoreKit.framework"
+  install_framework "Pods-PredestinedEncounter/FBSDKLoginKit.framework"
+  install_framework "Pods-PredestinedEncounter/FBSDKShareKit.framework"
   install_framework "Pods-PredestinedEncounter/JSQMessagesViewController.framework"
   install_framework "Pods-PredestinedEncounter/JSQSystemSoundPlayer.framework"
   install_framework "Pods-PredestinedEncounter/MDCSwipeToChoose.framework"
