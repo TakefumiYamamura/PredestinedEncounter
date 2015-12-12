@@ -22,6 +22,8 @@
 		E76C44491C1C20360023237A /* couple-running-beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E76C44481C1C20360023237A /* couple-running-beach.jpg */; };
 		E76C444D1C1C4EB80023237A /* Mu-Mu--logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E76C444C1C1C4EB80023237A /* Mu-Mu--logo.png */; };
 		E76C444F1C1C5B200023237A /* Mu-Mu--logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = E76C444E1C1C5B200023237A /* Mu-Mu--logo_white.png */; };
+		E76C44571C1CA86D0023237A /* like47.png in Resources */ = {isa = PBXBuildFile; fileRef = E76C44561C1CA86D0023237A /* like47.png */; };
+		E76C44591C1CA8900023237A /* close33.png in Resources */ = {isa = PBXBuildFile; fileRef = E76C44581C1CA8900023237A /* close33.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		E76C44481C1C20360023237A /* couple-running-beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "couple-running-beach.jpg"; path = "../../Pictures/couple-running-beach.jpg"; sourceTree = "<group>"; };
 		E76C444C1C1C4EB80023237A /* Mu-Mu--logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Mu-Mu--logo.png"; path = "../../Downloads/Mu-Mu--logo.png"; sourceTree = "<group>"; };
 		E76C444E1C1C5B200023237A /* Mu-Mu--logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Mu-Mu--logo_white.png"; path = "../../Downloads/Mu-Mu--logo_white.png"; sourceTree = "<group>"; };
+		E76C44561C1CA86D0023237A /* like47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = like47.png; path = ../../Downloads/like47.png; sourceTree = "<group>"; };
+		E76C44581C1CA8900023237A /* close33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close33.png; path = ../../Downloads/close33.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 		E73A56E71C017D6F0005EA9B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E76C44581C1CA8900023237A /* close33.png */,
+				E76C44561C1CA86D0023237A /* like47.png */,
 				E76C444E1C1C5B200023237A /* Mu-Mu--logo_white.png */,
 				E76C444C1C1C4EB80023237A /* Mu-Mu--logo.png */,
 				E76C44481C1C20360023237A /* couple-running-beach.jpg */,
@@ -317,7 +323,9 @@
 				E7698CA71C00D7F100AB7FB7 /* Assets.xcassets in Resources */,
 				E76C444F1C1C5B200023237A /* Mu-Mu--logo_white.png in Resources */,
 				E76C44491C1C20360023237A /* couple-running-beach.jpg in Resources */,
+				E76C44571C1CA86D0023237A /* like47.png in Resources */,
 				E73A56E91C017E3C0005EA9B /* cute_girl.jpg in Resources */,
+				E76C44591C1CA8900023237A /* close33.png in Resources */,
 				E7698CA51C00D7F100AB7FB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

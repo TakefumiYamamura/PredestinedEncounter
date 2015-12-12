@@ -38,9 +38,9 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
-        options.likedText = "Like"
+        options.likedText = "LIKE"
         options.likedColor = UIColor.blueColor()
-        options.nopeText = "DisLike"
+        options.nopeText = "NOPE"
         options.onPan = { state -> Void in
             if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Left {
                 print("Photo deleted!")
@@ -49,7 +49,15 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         
         let view = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
         view.imageView.image = UIImage(named: "cute_girl.jpg")
+        view.frame = CGRectMake(10, 100, self.view.frame.width - 20, self.view.frame.height - 250)
+        view.frame.height
         self.view.addSubview(view)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
     }
     
     
@@ -79,5 +87,9 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         }else{
             print("Photo saved!")
         }
+    }
+    
+    func toMessageListViewController(){
+        self.performSegueWithIdentifier("toMessageListView", sender: nil)
     }
 }

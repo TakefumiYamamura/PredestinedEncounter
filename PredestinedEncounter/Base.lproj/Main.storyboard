@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lfh-Pz-y9s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gAP-Gs-7GM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -35,14 +36,45 @@
                     <view key="view" contentMode="scaleToFill" id="zqp-9w-6OR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="like47.png" translatesAutoresizingMaskIntoConstraints="NO" id="p5z-Gq-tNz">
+                                <rect key="frame" x="231" y="499" width="80" height="78"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="Q1A-Nr-u7o"/>
+                                    <constraint firstAttribute="width" constant="78" id="wzR-0w-kkB"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="close33.png" translatesAutoresizingMaskIntoConstraints="NO" id="6n4-sa-chr">
+                                <rect key="frame" x="72" y="499" width="78" height="78"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="PCu-dI-cca"/>
+                                    <constraint firstAttribute="height" constant="78" id="pgh-SX-peQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L9M-zF-LNV" firstAttribute="top" secondItem="6n4-sa-chr" secondAttribute="bottom" constant="30" id="BXh-QZ-BC2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p5z-Gq-tNz" secondAttribute="trailing" constant="20" id="NVl-4Y-cWg"/>
+                            <constraint firstItem="p5z-Gq-tNz" firstAttribute="leading" secondItem="6n4-sa-chr" secondAttribute="trailing" constant="81" id="ZXa-3a-3Bj"/>
+                            <constraint firstItem="6n4-sa-chr" firstAttribute="leading" secondItem="zqp-9w-6OR" secondAttribute="leadingMargin" constant="20" id="gJx-vk-hJt"/>
+                            <constraint firstItem="L9M-zF-LNV" firstAttribute="top" secondItem="p5z-Gq-tNz" secondAttribute="bottom" constant="30" id="iIo-np-zAM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZXa-3a-3Bj"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="p6s-aE-59S"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scc-Bn-Zv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817.5" y="108.5"/>
+            <point key="canvasLocation" x="1871.5" y="64.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="f4N-aw-ev5">
@@ -110,11 +142,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GuA-hU-t9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1883.5" y="51.5"/>
+            <point key="canvasLocation" x="2695.5" y="51.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cTM-Co-2tC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gAP-Gs-7GM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V3u-Jq-KXv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qoo-6a-wvh" kind="relationship" relationship="rootViewController" id="qmk-vm-AIp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWl-pf-guB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="64"/>
         </scene>
     </scenes>
     <resources>
         <image name="Mu-Mu--logo_white.png" width="400" height="316"/>
+        <image name="close33.png" width="512" height="512"/>
         <image name="couple-running-beach.jpg" width="5616" height="3744"/>
+        <image name="like47.png" width="512" height="512"/>
     </resources>
 </document>
