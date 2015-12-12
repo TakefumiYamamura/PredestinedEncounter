@@ -28,6 +28,18 @@ class LoginViewController: UIViewController {
         topTitle = makeShadow(topTitle)
         subDiscription = makeShadow(subDiscription)
         
+        let loginButton = FBSDKLoginButton()
+        loginButton.center = CGPoint(x: view.center.x, y: view.frame.height*3/4 )
+        loginButton.layer.cornerRadius = 30
+        
+        
+        loginButton.layer.shadowRadius = 0
+        loginButton.layer.shadowOffset = CGSize(width: 3, height: 3)
+        loginButton.layer.shadowColor  = UIColor.blackColor().CGColor
+        loginButton.layer.shadowOpacity = 0.8
+        loginButton.layer.shadowRadius = 5
+        view.addSubview(loginButton)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -45,6 +57,7 @@ class LoginViewController: UIViewController {
     
         return label
     }
+    
     
 
     /*
