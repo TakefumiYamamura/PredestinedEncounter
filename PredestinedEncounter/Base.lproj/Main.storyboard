@@ -77,12 +77,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Mu-Mu--logo_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="vOW-TY-7uU">
+                                <rect key="frame" x="67" y="82" width="240" height="182"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Qme-4G-0yx"/>
+                                    <constraint firstAttribute="width" constant="240" id="oLO-Z8-hVC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fi5-kh-Bq8" firstAttribute="centerX" secondItem="bq3-u3-9pc" secondAttribute="centerX" id="8Of-i3-1QK"/>
+                            <constraint firstItem="vOW-TY-7uU" firstAttribute="top" secondItem="L8A-TS-BTz" secondAttribute="bottom" constant="60" id="IBd-cA-uV5"/>
                             <constraint firstItem="WyW-Z0-nx4" firstAttribute="centerX" secondItem="bq3-u3-9pc" secondAttribute="centerX" id="KcA-8R-pXp"/>
+                            <constraint firstItem="vOW-TY-7uU" firstAttribute="centerX" secondItem="bq3-u3-9pc" secondAttribute="centerX" id="MfP-nG-nZ8"/>
                             <constraint firstItem="Xbt-cX-8Qk" firstAttribute="top" secondItem="raf-ac-i3v" secondAttribute="bottom" id="VfJ-bU-imP"/>
                             <constraint firstItem="raf-ac-i3v" firstAttribute="top" secondItem="bq3-u3-9pc" secondAttribute="top" id="XkG-SZ-F0D"/>
                             <constraint firstItem="fi5-kh-Bq8" firstAttribute="top" secondItem="WyW-Z0-nx4" secondAttribute="bottom" constant="8" id="Y4s-ZR-9ne"/>
@@ -100,10 +110,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GuA-hU-t9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930.5" y="67.5"/>
+            <point key="canvasLocation" x="1883.5" y="51.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Mu-Mu--logo_white.png" width="400" height="316"/>
         <image name="couple-running-beach.jpg" width="5616" height="3744"/>
     </resources>
 </document>
