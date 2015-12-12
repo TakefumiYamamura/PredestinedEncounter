@@ -94,6 +94,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginView" destination="raf-ac-i3v" id="WAY-q5-vbn"/>
+                        <outlet property="subDiscription" destination="fi5-kh-Bq8" id="DRG-xM-sbp"/>
+                        <outlet property="topTitle" destination="WyW-Z0-nx4" id="igJ-Rl-b17"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GuA-hU-t9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
