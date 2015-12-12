@@ -10,6 +10,7 @@
 		CF13C32D0FC41ED762E8FDCB /* Pods_PredestinedEncounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D730AB85ACACBD4AF6BA854 /* Pods_PredestinedEncounter.framework */; };
 		E73A56E91C017E3C0005EA9B /* cute_girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E73A56E81C017E3C0005EA9B /* cute_girl.jpg */; };
 		E73A56EB1C017E480005EA9B /* yamamura.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E73A56EA1C017E480005EA9B /* yamamura.jpg */; };
+		E73CC8771C0838B5001373D0 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73CC8761C0838B5001373D0 /* SwipeViewController.swift */; };
 		E7698CA01C00D7F100AB7FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7698C9F1C00D7F100AB7FB7 /* AppDelegate.swift */; };
 		E7698CA21C00D7F100AB7FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7698CA11C00D7F100AB7FB7 /* ViewController.swift */; };
 		E7698CA51C00D7F100AB7FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7698CA31C00D7F100AB7FB7 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 		A52664EB998D3A3CDEE895B4 /* Pods-PredestinedEncounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PredestinedEncounter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PredestinedEncounter/Pods-PredestinedEncounter.debug.xcconfig"; sourceTree = "<group>"; };
 		E73A56E81C017E3C0005EA9B /* cute_girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cute_girl.jpg; path = ../../Documents/cute_girl.jpg; sourceTree = "<group>"; };
 		E73A56EA1C017E480005EA9B /* yamamura.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = yamamura.jpg; path = ../../Documents/yamamura.jpg; sourceTree = "<group>"; };
+		E73CC8711C08379D001373D0 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		E73CC8761C0838B5001373D0 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		E7698C9C1C00D7F100AB7FB7 /* PredestinedEncounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PredestinedEncounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7698C9F1C00D7F100AB7FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7698CA11C00D7F100AB7FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,8 +138,11 @@
 			isa = PBXGroup;
 			children = (
 				E7698C9F1C00D7F100AB7FB7 /* AppDelegate.swift */,
+				E73CC8711C08379D001373D0 /* BridgingHeader.h */,
 				E73A56E71C017D6F0005EA9B /* images */,
-				E7698CA11C00D7F100AB7FB7 /* ViewController.swift */,
+				E76C44451C1C0C140023237A /* Model */,
+				E76C44441C1C0C060023237A /* ViewController */,
+				E76C44431C1C0BFB0023237A /* View */,
 				E7698CA31C00D7F100AB7FB7 /* Main.storyboard */,
 				E7698CA61C00D7F100AB7FB7 /* Assets.xcassets */,
 				E7698CA81C00D7F100AB7FB7 /* LaunchScreen.storyboard */,
@@ -161,6 +167,29 @@
 				E7698CC11C00D7F200AB7FB7 /* Info.plist */,
 			);
 			path = PredestinedEncounterUITests;
+			sourceTree = "<group>";
+		};
+		E76C44431C1C0BFB0023237A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E76C44441C1C0C060023237A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7698CA11C00D7F100AB7FB7 /* ViewController.swift */,
+				E73CC8761C0838B5001373D0 /* SwipeViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E76C44451C1C0C140023237A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +378,7 @@
 			files = (
 				E7698CA21C00D7F100AB7FB7 /* ViewController.swift in Sources */,
 				E7698CA01C00D7F100AB7FB7 /* AppDelegate.swift in Sources */,
+				E73CC8771C0838B5001373D0 /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +523,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mumu.PredestinedEncounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = PredestinedEncounter/BridgingHeader.h;
 			};
 			name = Debug;
 		};
@@ -505,6 +536,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mumu.PredestinedEncounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = PredestinedEncounter/BridgingHeader.h;
 			};
 			name = Release;
 		};
