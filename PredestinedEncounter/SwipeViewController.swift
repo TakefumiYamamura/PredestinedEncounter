@@ -13,8 +13,8 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 
 class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
-
-
+    let likeButton = UIButtonAnimated()
+    let nopeButton = UIButtonAnimated()
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,8 +55,6 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         view.frame.height
         self.view.addSubview(view)
         
-        let likeButton = UIButton()
-        let nopeButton = UIButton()
         likeButton.setImage(UIImage(named: "like47.png"), forState: .Normal)
         nopeButton.setImage(UIImage(named: "close33.png"), forState: .Normal)
         
@@ -112,4 +110,43 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
     func toMessageListViewController(){
         self.performSegueWithIdentifier("toMessageListView", sender: nil)
     }
+    
+//    /*
+//    ボタンイベント(Down)
+//    */
+//    func onDownButton(sender: UIButton){
+//        UIView.animateWithDuration(0.06,
+//            
+//            // アニメーション中の処理.
+//            animations: { () -> Void in
+//                
+//                // 縮小用アフィン行列を作成する.
+//                self.myButton.transform = CGAffineTransformMakeScale(0.9, 0.9)
+//                
+//            })
+//            { (Bool) -> Void in
+//                
+//        }
+//    }
+//    
+//    /*
+//    ボタンイベント(Up)
+//    */
+//    func onUpButton(sender: UIButton){
+//        UIView.animateWithDuration(0.1,
+//            
+//            // アニメーション中の処理.
+//            animations: { () -> Void in
+//                
+//                // 拡大用アフィン行列を作成する.
+//                self.myButton.transform = CGAffineTransformMakeScale(0.4, 0.4)
+//                
+//                // 縮小用アフィン行列を作成する.
+//                self.myButton.transform = CGAffineTransformMakeScale(1.0, 1.0)
+//                
+//            })
+//            { (Bool) -> Void in
+//                
+//        }
+//    }
 }

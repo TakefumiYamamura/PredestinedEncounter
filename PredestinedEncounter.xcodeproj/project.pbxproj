@@ -27,6 +27,7 @@
 		E76C445C1C1CAF850023237A /* MessageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C445A1C1CAF850023237A /* MessageListTableViewCell.swift */; };
 		E76C445D1C1CAF850023237A /* MessageListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E76C445B1C1CAF850023237A /* MessageListTableViewCell.xib */; };
 		E76C445F1C1CB1670023237A /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C445E1C1CB1670023237A /* MessageListTableViewController.swift */; };
+		E76C44611C1CBD140023237A /* UIButtonAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C44601C1CBD140023237A /* UIButtonAnimated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		E76C445A1C1CAF850023237A /* MessageListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListTableViewCell.swift; sourceTree = "<group>"; };
 		E76C445B1C1CAF850023237A /* MessageListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageListTableViewCell.xib; sourceTree = "<group>"; };
 		E76C445E1C1CB1670023237A /* MessageListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListTableViewController.swift; sourceTree = "<group>"; };
+		E76C44601C1CBD140023237A /* UIButtonAnimated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonAnimated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			children = (
 				E76C445B1C1CAF850023237A /* MessageListTableViewCell.xib */,
 				E76C445A1C1CAF850023237A /* MessageListTableViewCell.swift */,
+				E76C44601C1CBD140023237A /* UIButtonAnimated.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				E7698CA21C00D7F100AB7FB7 /* ViewController.swift in Sources */,
 				E76C445C1C1CAF850023237A /* MessageListTableViewCell.swift in Sources */,
 				E7698CA01C00D7F100AB7FB7 /* AppDelegate.swift in Sources */,
+				E76C44611C1CBD140023237A /* UIButtonAnimated.swift in Sources */,
 				E73CC8771C0838B5001373D0 /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
