@@ -14,6 +14,7 @@ import JSQMessagesViewController
 import Parse
 import FBSDKCoreKit
 import FBSDKLoginKit
+import FBSDKShareKit
 
 class ViewController: JSQMessagesViewController, PTPusherDelegate  {
     var client: PTPusher!

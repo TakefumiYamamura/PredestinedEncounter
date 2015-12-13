@@ -11,6 +11,7 @@ import MDCSwipeToChoose
 import Parse
 import FBSDKCoreKit
 import FBSDKLoginKit
+import FBSDKShareKit
 
 class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
     let likeButton = UIButtonAnimated()
@@ -64,6 +65,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         view.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width - 40)
         view.frame.height
         self.view.addSubview(view)
+        
         
         likeButton.setImage(UIImage(named: "like47.png"), forState: .Normal)
         nopeButton.setImage(UIImage(named: "close33.png"), forState: .Normal)
