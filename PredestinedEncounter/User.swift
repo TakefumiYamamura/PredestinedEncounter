@@ -8,19 +8,18 @@
 
 import UIKit
 
-enum UserSex: Int {
+enum UserGender: Int {
     case Man = 0
     case Woman = 1
 }
 
 class User: NSObject {
     var name: String
-    var sex: String
-//    var age: UserSex
-//    init(name: String, sex: String, age: UserSex){
-    init(name: String, sex: String){
+    var age: String
+    var gender: UserGender
+    init(name: String, age: String, gender: UserGender){
         self.name = name
-        self.sex = sex
-//        self.age = age
+        self.age = age
+        self.gender = gender
     }
 }

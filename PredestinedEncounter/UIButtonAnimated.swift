@@ -37,7 +37,7 @@ class UIButtonAnimated: UIButton {
             delay: 0.0,
             options: UIViewAnimationOptions.CurveEaseIn,
             animations: {() -> Void in
-                self.transform = CGAffineTransformMakeScale(0.95, 0.95);
+                self.transform = CGAffineTransformMakeScale(0.85, 0.85);
                 self.alpha = 0.7
             },
             completion: nil
