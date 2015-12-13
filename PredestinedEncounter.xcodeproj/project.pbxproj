@@ -28,6 +28,11 @@
 		E76C445D1C1CAF850023237A /* MessageListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E76C445B1C1CAF850023237A /* MessageListTableViewCell.xib */; };
 		E76C445F1C1CB1670023237A /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C445E1C1CB1670023237A /* MessageListTableViewController.swift */; };
 		E76C44611C1CBD140023237A /* UIButtonAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C44601C1CBD140023237A /* UIButtonAnimated.swift */; };
+		E76C44631C1CC7CE0023237A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E76C44621C1CC7CD0023237A /* background.png */; };
+		E76C44651C1CCDEB0023237A /* couple-walking-waves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E76C44641C1CCDEB0023237A /* couple-walking-waves.jpg */; };
+		E76C44671C1CCE580023237A /* lights-night-dark-abstract.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E76C44661C1CCE580023237A /* lights-night-dark-abstract.jpeg */; };
+		E76C44691C1D26590023237A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C44681C1D26590023237A /* User.swift */; };
+		E76C446B1C1D26730023237A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C446A1C1D26730023237A /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,11 @@
 		E76C445B1C1CAF850023237A /* MessageListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageListTableViewCell.xib; sourceTree = "<group>"; };
 		E76C445E1C1CB1670023237A /* MessageListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListTableViewController.swift; sourceTree = "<group>"; };
 		E76C44601C1CBD140023237A /* UIButtonAnimated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonAnimated.swift; sourceTree = "<group>"; };
+		E76C44621C1CC7CD0023237A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../Pictures/background.png; sourceTree = "<group>"; };
+		E76C44641C1CCDEB0023237A /* couple-walking-waves.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "couple-walking-waves.jpg"; path = "../../Pictures/couple-walking-waves.jpg"; sourceTree = "<group>"; };
+		E76C44661C1CCE580023237A /* lights-night-dark-abstract.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "lights-night-dark-abstract.jpeg"; path = "../../Pictures/lights-night-dark-abstract.jpeg"; sourceTree = "<group>"; };
+		E76C44681C1D26590023237A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E76C446A1C1D26730023237A /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +136,9 @@
 		E73A56E71C017D6F0005EA9B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E76C44661C1CCE580023237A /* lights-night-dark-abstract.jpeg */,
+				E76C44641C1CCDEB0023237A /* couple-walking-waves.jpg */,
+				E76C44621C1CC7CD0023237A /* background.png */,
 				E76C44581C1CA8900023237A /* close33.png */,
 				E76C44561C1CA86D0023237A /* like47.png */,
 				E76C444E1C1C5B200023237A /* Mu-Mu--logo_white.png */,
@@ -218,6 +231,8 @@
 		E76C44451C1C0C140023237A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E76C44681C1D26590023237A /* User.swift */,
+				E76C446A1C1D26730023237A /* Message.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -330,16 +345,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7698CAA1C00D7F100AB7FB7 /* LaunchScreen.storyboard in Resources */,
+				E76C44631C1CC7CE0023237A /* background.png in Resources */,
 				E73A56EB1C017E480005EA9B /* yamamura.jpg in Resources */,
 				E76C445D1C1CAF850023237A /* MessageListTableViewCell.xib in Resources */,
 				E76C444D1C1C4EB80023237A /* Mu-Mu--logo.png in Resources */,
 				E7698CA71C00D7F100AB7FB7 /* Assets.xcassets in Resources */,
 				E76C444F1C1C5B200023237A /* Mu-Mu--logo_white.png in Resources */,
 				E76C44491C1C20360023237A /* couple-running-beach.jpg in Resources */,
+				E76C44651C1CCDEB0023237A /* couple-walking-waves.jpg in Resources */,
 				E76C44571C1CA86D0023237A /* like47.png in Resources */,
 				E73A56E91C017E3C0005EA9B /* cute_girl.jpg in Resources */,
 				E76C44591C1CA8900023237A /* close33.png in Resources */,
 				E7698CA51C00D7F100AB7FB7 /* Main.storyboard in Resources */,
+				E76C44671C1CCE580023237A /* lights-night-dark-abstract.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +433,9 @@
 				E76C44471C1C0D380023237A /* LoginViewController.swift in Sources */,
 				E76C445F1C1CB1670023237A /* MessageListTableViewController.swift in Sources */,
 				E7698CA21C00D7F100AB7FB7 /* ViewController.swift in Sources */,
+				E76C446B1C1D26730023237A /* Message.swift in Sources */,
 				E76C445C1C1CAF850023237A /* MessageListTableViewCell.swift in Sources */,
+				E76C44691C1D26590023237A /* User.swift in Sources */,
 				E7698CA01C00D7F100AB7FB7 /* AppDelegate.swift in Sources */,
 				E76C44611C1CBD140023237A /* UIButtonAnimated.swift in Sources */,
 				E73CC8771C0838B5001373D0 /* SwipeViewController.swift in Sources */,

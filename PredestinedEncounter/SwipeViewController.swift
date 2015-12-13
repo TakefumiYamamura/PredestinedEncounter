@@ -35,7 +35,17 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+        backgroundView.image = UIImage(named: "couple-running-beach.jpg")
+        backgroundView.contentMode = UIViewContentMode.ScaleAspectFill
+        self.view.addSubview(backgroundView)
         
+        let coverView = UIView()
+        coverView.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        coverView.backgroundColor = UIColor.blackColor()
+        coverView.alpha = 0.7
+        self.view.addSubview(coverView)
+    
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
         options.likedText = "LIKE"
@@ -51,7 +61,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         
         let view = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
         view.imageView.image = UIImage(named: "cute_girl.jpg")
-        view.frame = CGRectMake(10, 100, self.view.frame.width - 20, self.view.frame.height - 250)
+        view.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width - 40)
         view.frame.height
         self.view.addSubview(view)
         
@@ -64,11 +74,15 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         nopeButton.frame.size = CGSize(width: 70, height: 70)
         nopeButton.center = CGPoint(x: self.view.center.x - 70, y: self.view.frame.height - 70)
         
-        
-        
-//        nopeButton.frame = CGRectMake(self.view.center.x-30, self.view.frame.height - 30, 50, 50)
         self.view.addSubview(likeButton)
         self.view.addSubview(nopeButton)
+        
+//        self.navigationController!.navigationBar.barTintColor = UIColor.blackColor()
+        self.title = "mu-mu-"
+        self.navigationController!.navigationBar.titleTextAttributes =
+            [NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 20)!]
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -111,42 +125,4 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         self.performSegueWithIdentifier("toMessageListView", sender: nil)
     }
     
-//    /*
-//    ボタンイベント(Down)
-//    */
-//    func onDownButton(sender: UIButton){
-//        UIView.animateWithDuration(0.06,
-//            
-//            // アニメーション中の処理.
-//            animations: { () -> Void in
-//                
-//                // 縮小用アフィン行列を作成する.
-//                self.myButton.transform = CGAffineTransformMakeScale(0.9, 0.9)
-//                
-//            })
-//            { (Bool) -> Void in
-//                
-//        }
-//    }
-//    
-//    /*
-//    ボタンイベント(Up)
-//    */
-//    func onUpButton(sender: UIButton){
-//        UIView.animateWithDuration(0.1,
-//            
-//            // アニメーション中の処理.
-//            animations: { () -> Void in
-//                
-//                // 拡大用アフィン行列を作成する.
-//                self.myButton.transform = CGAffineTransformMakeScale(0.4, 0.4)
-//                
-//                // 縮小用アフィン行列を作成する.
-//                self.myButton.transform = CGAffineTransformMakeScale(1.0, 1.0)
-//                
-//            })
-//            { (Bool) -> Void in
-//                
-//        }
-//    }
 }
