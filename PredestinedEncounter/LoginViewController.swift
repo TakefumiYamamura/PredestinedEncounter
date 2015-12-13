@@ -36,6 +36,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.layer.shadowColor  = UIColor.blackColor().CGColor
         loginButton.layer.shadowOpacity = 0.8
         loginButton.layer.shadowRadius = 5
+        loginButton.delegate = self
+        loginButton.readPermissions = ["email", "public_profile", "user_friends"]
         view.addSubview(loginButton)
         
         // Do any additional setup after loading the view.
@@ -48,10 +50,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        print("User Already Logged In")
-        if(FBSDKAccessToken.currentAccessToken() != nil){
-            self.performSegueWithIdentifier("ModalFromLoginToSwipeSegue", sender: self)
-        }
+        
+//        if(FBSDKAccessToken.currentAccessToken() != nil){
+//            print("User Already Logged In")
+//            self.performSegueWithIdentifier("ModalFromLoginToSwipeSegue", sender: self)
+//        }
         
     }
     
@@ -89,6 +92,12 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
         return label
     }
+    
+//    func didTouchButton(){
+//        let loginManger = FBSDKLoginManager()
+//        loginManger.logOut()
+//        print("dfadsfaf")
+//    }
     
     
     
