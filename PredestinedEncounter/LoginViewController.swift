@@ -48,14 +48,18 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+//        
 //        if(FBSDKAccessToken.currentAccessToken() != nil){
 //            print("User Already Logged In")
 //            self.performSegueWithIdentifier("ModalFromLoginToSwipeSegue", sender: self)
 //        }
-        
+//
     }
     
     func loginButton(loginButton: FBSDKLoginButton!,didCompleteWithResult

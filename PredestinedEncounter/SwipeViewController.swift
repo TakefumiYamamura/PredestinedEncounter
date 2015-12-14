@@ -36,17 +36,17 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
-        backgroundView.image = UIImage(named: "couple-running-beach.jpg")
-        backgroundView.contentMode = UIViewContentMode.ScaleAspectFill
-        self.view.addSubview(backgroundView)
-        
-        let coverView = UIView()
-        coverView.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
-        coverView.backgroundColor = UIColor.blackColor()
-        coverView.alpha = 0.7
-        self.view.addSubview(coverView)
-    
+//        let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+//        backgroundView.image = UIImage(named: "couple-running-beach.jpg")
+//        backgroundView.contentMode = UIViewContentMode.ScaleAspectFill
+//        self.view.addSubview(backgroundView)
+//        
+//        let coverView = UIView()
+//        coverView.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+//        coverView.backgroundColor = UIColor.blackColor()
+//        coverView.alpha = 0.7
+//        self.view.addSubview(coverView)
+//    
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
         options.likedText = "LIKE"
@@ -59,7 +59,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
                 print("Photo saved!")
             }
         }
-        
+    
         let view = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
         view.imageView.image = UIImage(named: "cute_girl.jpg")
         view.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width - 40)
@@ -81,10 +81,14 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         
 //        self.navigationController!.navigationBar.barTintColor = UIColor.blackColor()
         self.title = "mu-mu-"
-        self.navigationController!.navigationBar.titleTextAttributes =
-            [NSForegroundColorAttributeName: UIColor.whiteColor(),
-                NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 20)!]
-        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+//        self.navigationItem.rightBarButtonItem?.image = UIImage(named: "social12.png")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "social12.png"), style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
+//        self.navigationController?.navigationBar.frame = CGRectMake(self.view.center.x, 16, 32, 32)
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "Mu-Mu--logo.png"), forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController!.navigationBar.titleTextAttributes =
+//            [NSForegroundColorAttributeName: UIColor.whiteColor(),
+//                NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 20)!]
+//        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
     }
     
     override func viewWillAppear(animated: Bool) {

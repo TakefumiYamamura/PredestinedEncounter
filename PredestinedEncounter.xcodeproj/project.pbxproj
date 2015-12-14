@@ -35,6 +35,9 @@
 		E76C446B1C1D26730023237A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C446A1C1D26730023237A /* Message.swift */; };
 		E76C446D1C1D3AAC0023237A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C446C1C1D3AAC0023237A /* FBSDKCoreKit.framework */; };
 		E76C446F1C1D3AC80023237A /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C446E1C1D3AC80023237A /* FBSDKShareKit.framework */; };
+		E7ECC93A1C1DA6D0008A20D6 /* social12 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = E7ECC9371C1DA6D0008A20D6 /* social12 (1).png */; };
+		E7ECC93B1C1DA6D0008A20D6 /* social12 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = E7ECC9381C1DA6D0008A20D6 /* social12 (2).png */; };
+		E7ECC93C1C1DA6D0008A20D6 /* social12.png in Resources */ = {isa = PBXBuildFile; fileRef = E7ECC9391C1DA6D0008A20D6 /* social12.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,9 @@
 		E76C446A1C1D26730023237A /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E76C446C1C1D3AAC0023237A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		E76C446E1C1D3AC80023237A /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		E7ECC9371C1DA6D0008A20D6 /* social12 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "social12 (1).png"; path = "../../Downloads/social12 (1).png"; sourceTree = "<group>"; };
+		E7ECC9381C1DA6D0008A20D6 /* social12 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "social12 (2).png"; path = "../../Downloads/social12 (2).png"; sourceTree = "<group>"; };
+		E7ECC9391C1DA6D0008A20D6 /* social12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = social12.png; path = ../../Downloads/social12.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,9 @@
 		E73A56E71C017D6F0005EA9B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E7ECC9371C1DA6D0008A20D6 /* social12 (1).png */,
+				E7ECC9381C1DA6D0008A20D6 /* social12 (2).png */,
+				E7ECC9391C1DA6D0008A20D6 /* social12.png */,
 				E76C44661C1CCE580023237A /* lights-night-dark-abstract.jpeg */,
 				E76C44641C1CCDEB0023237A /* couple-walking-waves.jpg */,
 				E76C44621C1CC7CD0023237A /* background.png */,
@@ -356,9 +365,12 @@
 				E76C44631C1CC7CE0023237A /* background.png in Resources */,
 				E73A56EB1C017E480005EA9B /* yamamura.jpg in Resources */,
 				E76C445D1C1CAF850023237A /* MessageListTableViewCell.xib in Resources */,
+				E7ECC93B1C1DA6D0008A20D6 /* social12 (2).png in Resources */,
+				E7ECC93C1C1DA6D0008A20D6 /* social12.png in Resources */,
 				E76C444D1C1C4EB80023237A /* Mu-Mu--logo.png in Resources */,
 				E7698CA71C00D7F100AB7FB7 /* Assets.xcassets in Resources */,
 				E76C444F1C1C5B200023237A /* Mu-Mu--logo_white.png in Resources */,
+				E7ECC93A1C1DA6D0008A20D6 /* social12 (1).png in Resources */,
 				E76C44491C1C20360023237A /* couple-running-beach.jpg in Resources */,
 				E76C44651C1CCDEB0023237A /* couple-walking-waves.jpg in Resources */,
 				E76C44571C1CA86D0023237A /* like47.png in Resources */,
