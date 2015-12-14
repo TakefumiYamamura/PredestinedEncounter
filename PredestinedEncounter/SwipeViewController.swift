@@ -36,6 +36,22 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //fb情報取得
+        let graphRequest: FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "name, email, gender, age_range, picture.type(large)"])
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            if ((error) != nil) {
+                print("Error: \(error)")
+            } else {
+                print(result)
+                let name = result.valueForKey("name") as! NSString
+                let email = result.valueForKey("email") as! NSString
+                let gender = result.valueForKey("gender") as! NSString
+//                let profileImageURL : String = reu.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as! String
+//                var profileImage = UIImage(data: NSData(contentsOfURL: NSURL(string: profileImageURL)!)!)
+                print("Name: \(name), Email: \(email), Gender: \(gender)")
+            }
+        })
+        
 //        let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
 //        backgroundView.image = UIImage(named: "couple-running-beach.jpg")
 //        backgroundView.contentMode = UIViewContentMode.ScaleAspectFill
@@ -61,6 +77,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         }
     
         let view = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
+        
         view.imageView.image = UIImage(named: "cute_girl.jpg")
         view.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width - 40)
         view.frame.height
@@ -130,5 +147,6 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
     func toMessageListViewController(){
         self.performSegueWithIdentifier("toMessageListView", sender: nil)
     }
+    
     
 }
