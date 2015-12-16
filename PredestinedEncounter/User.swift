@@ -8,10 +8,12 @@
 
 import UIKit
 import Parse
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FBSDKShareKit
 
 enum UserGender: Int {
-    case Man = 0
-    case Woman = 1
+    case Man, Woman
 }
 
 class User: NSObject {
@@ -25,5 +27,13 @@ class User: NSObject {
         self.age = age
         self.gender = gender
         self.image = image
+    }
+    
+    func save() {
+        let usersObject = PFObject(className: "User")
+        usersObject["name"] = name
+        usersObject["age"] = age
+        usersObject["gender"] = gender.rawValue
+        usersObject["image"] = image
     }
 }

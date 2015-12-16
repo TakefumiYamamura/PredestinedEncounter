@@ -61,6 +61,7 @@
 		5A2B401C9335000943CE824D /* Pods-PredestinedEncounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PredestinedEncounter.release.xcconfig"; path = "Pods/Target Support Files/Pods-PredestinedEncounter/Pods-PredestinedEncounter.release.xcconfig"; sourceTree = "<group>"; };
 		6D730AB85ACACBD4AF6BA854 /* Pods_PredestinedEncounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PredestinedEncounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52664EB998D3A3CDEE895B4 /* Pods-PredestinedEncounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PredestinedEncounter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PredestinedEncounter/Pods-PredestinedEncounter.debug.xcconfig"; sourceTree = "<group>"; };
+		E72EF7011C21856D00B5F18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/UserManager.swift; sourceTree = "<group>"; };
 		E73A56E81C017E3C0005EA9B /* cute_girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cute_girl.jpg; path = ../../Documents/cute_girl.jpg; sourceTree = "<group>"; };
 		E73A56EA1C017E480005EA9B /* yamamura.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = yamamura.jpg; path = ../../Documents/yamamura.jpg; sourceTree = "<group>"; };
 		E73CC8711C08379D001373D0 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
@@ -249,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				E76C44681C1D26590023237A /* User.swift */,
+				E72EF7001C21856D00B5F18F /* UserManager.swift */,
 				E76C446A1C1D26730023237A /* Message.swift */,
 			);
 			name = Model;
@@ -495,6 +497,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E72EF7001C21856D00B5F18F /* UserManager.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E72EF7011C21856D00B5F18F /* Base */,
+			);
+			name = UserManager.swift;
+			sourceTree = "<group>";
+		};
 		E7698CA31C00D7F100AB7FB7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
