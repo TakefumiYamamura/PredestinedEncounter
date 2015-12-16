@@ -17,13 +17,13 @@ enum UserGender: Int {
 }
 
 class User: NSObject {
-    var name: String
+    var username: String
     var age: String
     var gender: UserGender
     var image: PFFile
 
-    init(name: String, age: String, gender: UserGender, image: PFFile){
-        self.name = name
+    init(username: String, age: String, gender: UserGender, image: PFFile){
+        self.username = username
         self.age = age
         self.gender = gender
         self.image = image
@@ -31,7 +31,7 @@ class User: NSObject {
     
     func save() {
         let usersObject = PFObject(className: "User")
-        usersObject["name"] = name
+        usersObject["username"] = username
         usersObject["age"] = age
         usersObject["gender"] = gender.rawValue
         usersObject["image"] = image

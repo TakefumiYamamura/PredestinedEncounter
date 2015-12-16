@@ -6,6 +6,8 @@ PODS:
   - Bolts/AppLinks (1.5.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.5.0)
+  - Facebook-iOS-SDK (3.24.1):
+    - Bolts (~> 1.2)
   - FBSDKCoreKit (4.8.0):
     - Bolts (~> 1.1)
     - FBSDKCoreKit/arc (= 4.8.0)
@@ -29,6 +31,10 @@ PODS:
   - MDCSwipeToChoose (0.2.3)
   - Parse (1.10.0):
     - Bolts/Tasks (~> 1.5)
+  - ParseFacebookUtils (1.9.1):
+    - Bolts/Tasks (~> 1.5)
+    - Facebook-iOS-SDK (~> 3.24)
+    - Parse (~> 1.9)
   - SocketRocket (0.4.1)
   - SwiftyJSON (2.3.2)
 
@@ -41,11 +47,13 @@ DEPENDENCIES:
   - libPusher
   - MDCSwipeToChoose
   - Parse
+  - ParseFacebookUtils
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
   Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
+  Facebook-iOS-SDK: 08689c2690dc4e087b9c8e171e48667608b72a2a
   FBSDKCoreKit: 66a935d17b6e00b6b64e604f2eb9b72c9ab7deb8
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
   FBSDKShareKit: e7577ee3adf80fc04fb656dd133fbb522250672b
@@ -54,6 +62,7 @@ SPEC CHECKSUMS:
   libPusher: 5ea58aeb83fa4ac1f5d8ef8543b1def6ace997b8
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
   Parse: 90b2544822200f84b18bfacc4e8b0a3a6c3584a2
+  ParseFacebookUtils: 14016713d460f605e8b4834cd616f19339d7e9c0
   SocketRocket: ee0b5c34182d37bb4f1f8d628bbe737718126daa
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
