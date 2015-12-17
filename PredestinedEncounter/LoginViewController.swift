@@ -87,13 +87,15 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                             let gender = result.valueForKey("gender") as! String
                             let userGender = UserGender(rawValue: gender)
                             let age = result.valueForKey("age_range")!.valueForKey("min") as! Int
-                            let password = String(result.valueForKey("id"))
-                            let imageUrl = result.valueForKey("picture")!.valueForKey("data")?.valueForKey("url") as! NSURL
+                            let password = result.valueForKey("id") as! String
+                            let imageUrl = NSURL(string: result.valueForKey("picture")!.valueForKey("data")?.valueForKey("url") as! String)
 
-                            let imageUIData = NSData(contentsOfURL: imageUrl)
-                            let Uimg = UIImage(data:imageUIData!);
-                            let imageData = UIImageJPEGRepresentation(Uimg!, 0.8)
-                            let image = PFFile(data: imageData!)
+                            let imageUIData = NSData(contentsOfURL: imageUrl!)
+                            let UIImg = UIImage(data:imageUIData!);
+//                            let imageData I= UIImagePNGRepresentation(Uimg!)
+                            let imageData = UIImageJPEGRepresentation(UIImg!, 0.8)
+                            let image = PFFile(name: "image.jpeg",data: imageData!)
+//                            let file = PFFile(data: UIImageJPEGRepresentation(Uimg!, 1.0)!)
                             let user = User(username: name, age: age, gender: userGender!, image: image!, password: password, email: email)
                             user.signUp({ (message) -> Void in
                                 print("サインアップしました")
