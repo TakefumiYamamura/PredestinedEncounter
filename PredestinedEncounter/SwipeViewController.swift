@@ -13,9 +13,10 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import FBSDKShareKit
 
-class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
+class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLoginButtonDelegate{
     let likeButton = UIButtonAnimated()
     let nopeButton = UIButtonAnimated()
+    let loginButton = FBSDKLoginButton()
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,6 +36,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.delegate = self
         
         //fb情報取得
         let graphRequest: FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "name, email, gender, age_range, picture.type(large), id"])
@@ -123,6 +125,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         super.viewWillAppear(animated)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "LogOut", style: UIBarButtonItemStyle.Plain, target: self, action: "logout")
     }
     
     
@@ -157,6 +160,21 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
     
     func toMessageListViewController(){
         self.performSegueWithIdentifier("toMessageListView", sender: nil)
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!,didCompleteWithResult
+        result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+            print("User Logged In")
+            
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        print("User Logged Out")
+    }
+    
+    func logout(){
+        let loginManager = FBSDKLoginManager()
+        loginManager.logOut()
     }
     
     
