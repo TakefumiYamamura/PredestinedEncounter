@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if(FBSDKAccessToken.currentAccessToken() == nil){
             print("User not Logged In")
+//            save()
             self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController")
         }
 //        }else{

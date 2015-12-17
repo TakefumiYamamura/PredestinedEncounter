@@ -76,6 +76,35 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 if result.grantedPermissions.contains("email")
                 {
                     print(result.grantedPermissions.contains("email"))
+                    //fb情報取得
+                    let graphRequest: FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "name, email, gender, age_range, picture.type(large), id"])
+                    graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+                        if ((error) != nil) {
+                            print("Error: \(error)")
+                        } else {
+                            let name = result.valueForKey("name") as! String
+                            let email = result.valueForKey("email") as! String
+                            let gender = result.valueForKey("gender") as! String
+                            let userGender = UserGender(rawValue: gender)
+                            let age = result.valueForKey("age_range")!.valueForKey("min") as! Int
+                            let password = String(result.valueForKey("id"))
+                            let imageUrl = result.valueForKey("picture")!.valueForKey("data")?.valueForKey("url") as! NSURL
+
+                            let imageUIData = NSData(contentsOfURL: imageUrl)
+                            let Uimg = UIImage(data:imageUIData!);
+                            let imageData = UIImageJPEGRepresentation(Uimg!, 0.8)
+                            let image = PFFile(data: imageData!)
+                            let user = User(username: name, age: age, gender: userGender!, image: image!, password: password, email: email)
+                            user.signUp({ (message) -> Void in
+                                print("サインアップしました")
+                            })                            //                let profileImageURL : String = reu.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as! String
+                            //                var profileImage = UIImage(data: NSData(contentsOfURL: NSURL(string: profileImageURL)!)!)
+//                            print("Name: \(name), Email: \(email), Gender: \(gender)")
+                        }
+                    
+                    })
+                    
+                    
                     self.performSegueWithIdentifier("ModalFromLoginToSwipeSegue", sender: self)
                 }
             }

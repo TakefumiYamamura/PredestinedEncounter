@@ -37,7 +37,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
         super.viewDidLoad()
         
         //fb情報取得
-        let graphRequest: FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "name, email, gender, age_range, picture.type(large)"])
+        let graphRequest: FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "name, email, gender, age_range, picture.type(large), id"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             if ((error) != nil) {
                 print("Error: \(error)")
@@ -46,8 +46,19 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate {
                 let name = result.valueForKey("name") as! NSString
                 let email = result.valueForKey("email") as! NSString
                 let gender = result.valueForKey("gender") as! NSString
-//                let profileImageURL : String = reu.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as! String
-//                var profileImage = UIImage(data: NSData(contentsOfURL: NSURL(string: profileImageURL)!)!)
+                print(result.valueForKey("age_range")!.valueForKey("min") as! NSInteger)
+                //                            let password = String(result.valueForKey("id"))
+                //                            let user = User(username: name, age: <#T##String#>, gender: <#T##UserGender#>, image: <#T##PFFile#>, password: <#T##String#>)
+                //                            user.signUp{(message) in
+                //                                if let unwrappedMessage = message {
+                //                                    print("サインアップ失敗")
+                //                                }else{
+                //                                    print("サインアップ成功")
+                //                                }
+                //
+                //                            }
+                //                let profileImageURL : String = reu.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as! String
+                //                var profileImage = UIImage(data: NSData(contentsOfURL: NSURL(string: profileImageURL)!)!)
                 print("Name: \(name), Email: \(email), Gender: \(gender)")
             }
         })
