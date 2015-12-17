@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PredestinedEncounter/Alamofire.framework"
+  install_framework "Pods-PredestinedEncounter/AlamofireImage.framework"
   install_framework "Pods-PredestinedEncounter/Bolts.framework"
   install_framework "Pods-PredestinedEncounter/FBSDKCoreKit.framework"
   install_framework "Pods-PredestinedEncounter/FBSDKLoginKit.framework"
@@ -99,6 +100,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PredestinedEncounter/Alamofire.framework"
+  install_framework "Pods-PredestinedEncounter/AlamofireImage.framework"
   install_framework "Pods-PredestinedEncounter/Bolts.framework"
   install_framework "Pods-PredestinedEncounter/FBSDKCoreKit.framework"
   install_framework "Pods-PredestinedEncounter/FBSDKLoginKit.framework"

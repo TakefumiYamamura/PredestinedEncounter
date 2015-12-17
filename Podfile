@@ -6,6 +6,7 @@ use_frameworks!
 target 'PredestinedEncounter' do
  pod 'libPusher'
  pod 'Alamofire'
+ pod 'AlamofireImage'
  pod 'SwiftyJSON'
  pod 'JSQMessagesViewController'
  pod "MDCSwipeToChoose"
