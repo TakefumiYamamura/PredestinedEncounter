@@ -91,6 +91,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                             let age = result.valueForKey("age_range")!.valueForKey("min") as! Int
                             let password = result.valueForKey("id") as! String
                             let imageUrl = NSURL(string: result.valueForKey("picture")!.valueForKey("data")?.valueForKey("url") as! String)
+//                            let imageUrl = NSURL(string: "http://chatnoir666.com/wp-content/uploads/2015/03/knuttz-ueba-305111.jpg")
                             
 //                            let imageView = UIImageView()
 //                            imageView.af_setImageWithURL(imageUrl!)

@@ -12,7 +12,6 @@
 		E73A56EB1C017E480005EA9B /* yamamura.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E73A56EA1C017E480005EA9B /* yamamura.jpg */; };
 		E73CC8771C0838B5001373D0 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73CC8761C0838B5001373D0 /* SwipeViewController.swift */; };
 		E7698CA01C00D7F100AB7FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7698C9F1C00D7F100AB7FB7 /* AppDelegate.swift */; };
-		E7698CA21C00D7F100AB7FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7698CA11C00D7F100AB7FB7 /* ViewController.swift */; };
 		E7698CA51C00D7F100AB7FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7698CA31C00D7F100AB7FB7 /* Main.storyboard */; };
 		E7698CA71C00D7F100AB7FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7698CA61C00D7F100AB7FB7 /* Assets.xcassets */; };
 		E7698CAA1C00D7F100AB7FB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7698CA81C00D7F100AB7FB7 /* LaunchScreen.storyboard */; };
@@ -35,6 +34,7 @@
 		E76C446B1C1D26730023237A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C446A1C1D26730023237A /* Message.swift */; };
 		E76C446D1C1D3AAC0023237A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C446C1C1D3AAC0023237A /* FBSDKCoreKit.framework */; };
 		E76C446F1C1D3AC80023237A /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C446E1C1D3AC80023237A /* FBSDKShareKit.framework */; };
+		E7C9F16B1C2439DF00A32438 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9F16A1C2439DF00A32438 /* MessageViewController.swift */; };
 		E7ECC93A1C1DA6D0008A20D6 /* social12 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = E7ECC9371C1DA6D0008A20D6 /* social12 (1).png */; };
 		E7ECC93B1C1DA6D0008A20D6 /* social12 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = E7ECC9381C1DA6D0008A20D6 /* social12 (2).png */; };
 		E7ECC93C1C1DA6D0008A20D6 /* social12.png in Resources */ = {isa = PBXBuildFile; fileRef = E7ECC9391C1DA6D0008A20D6 /* social12.png */; };
@@ -68,7 +68,6 @@
 		E73CC8761C0838B5001373D0 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		E7698C9C1C00D7F100AB7FB7 /* PredestinedEncounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PredestinedEncounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7698C9F1C00D7F100AB7FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7698CA11C00D7F100AB7FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E7698CA41C00D7F100AB7FB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7698CA61C00D7F100AB7FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7698CA91C00D7F100AB7FB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		E76C446A1C1D26730023237A /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E76C446C1C1D3AAC0023237A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		E76C446E1C1D3AC80023237A /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		E7C9F16A1C2439DF00A32438 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		E7ECC9371C1DA6D0008A20D6 /* social12 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "social12 (1).png"; path = "../../Downloads/social12 (1).png"; sourceTree = "<group>"; };
 		E7ECC9381C1DA6D0008A20D6 /* social12 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "social12 (2).png"; path = "../../Downloads/social12 (2).png"; sourceTree = "<group>"; };
 		E7ECC9391C1DA6D0008A20D6 /* social12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = social12.png; path = ../../Downloads/social12.png; sourceTree = "<group>"; };
@@ -238,10 +238,10 @@
 		E76C44441C1C0C060023237A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E7698CA11C00D7F100AB7FB7 /* ViewController.swift */,
 				E76C44461C1C0D380023237A /* LoginViewController.swift */,
 				E73CC8761C0838B5001373D0 /* SwipeViewController.swift */,
 				E76C445E1C1CB1670023237A /* MessageListTableViewController.swift */,
+				E7C9F16A1C2439DF00A32438 /* MessageViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -454,8 +454,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76C44471C1C0D380023237A /* LoginViewController.swift in Sources */,
+				E7C9F16B1C2439DF00A32438 /* MessageViewController.swift in Sources */,
 				E76C445F1C1CB1670023237A /* MessageListTableViewController.swift in Sources */,
-				E7698CA21C00D7F100AB7FB7 /* ViewController.swift in Sources */,
 				E76C446B1C1D26730023237A /* Message.swift in Sources */,
 				E76C445C1C1CAF850023237A /* MessageListTableViewCell.swift in Sources */,
 				E76C44691C1D26590023237A /* User.swift in Sources */,
