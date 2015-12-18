@@ -159,7 +159,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     }
     
     func toMessageListViewController(){
-        self.performSegueWithIdentifier("toMessageListView", sender: nil)
+        self.performSegueWithIdentifier("ShowToMessageListTableViewController", sender: nil)
     }
     
     func loginButton(loginButton: FBSDKLoginButton!,didCompleteWithResult
