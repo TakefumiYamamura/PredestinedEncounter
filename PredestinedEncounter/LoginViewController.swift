@@ -11,7 +11,8 @@ import Parse
 import FBSDKCoreKit
 import FBSDKLoginKit
 import FBSDKShareKit
-
+import AlamofireImage
+import Alamofire
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var loginView: UIImageView!
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         let coverView = UIView()
         coverView.frame = CGRectMake(0, 0, view.frame.width, view.frame.height)
         coverView.backgroundColor = UIColor.blackColor()
@@ -89,12 +91,38 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                             let age = result.valueForKey("age_range")!.valueForKey("min") as! Int
                             let password = result.valueForKey("id") as! String
                             let imageUrl = NSURL(string: result.valueForKey("picture")!.valueForKey("data")?.valueForKey("url") as! String)
-
-                            let imageUIData = NSData(contentsOfURL: imageUrl!)
-                            let UIImg = UIImage(data:imageUIData!);
-//                            let imageData I= UIImagePNGRepresentation(Uimg!)
-                            let imageData = UIImageJPEGRepresentation(UIImg!, 0.8)
-                            let image = PFFile(name: "image.jpeg",data: imageData!)
+                            
+                            let imageView = UIImageView()
+                            imageView.af_setImageWithURL(imageUrl!)
+                            imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+                            let imageData = UIImageJPEGRepresentation(imageView.image!, 0.8)
+                            let image = PFFile(name: "image.jpg", data: imageData!)
+                            
+    
+//                            let req = NSURLRequest(URL:imageUrl!)
+//                            //非同期で変換
+//                            NSURLConnection.sendAsynchronousRequest(req, queue:NSOperationQueue.mainQueue()){(res, data, err) in
+//                                imageView.image = UIImage(data:data!)
+//                            }
+//                            let imageData = UIImageJPEGRepresentation(imageView.image!, 0.8)
+//                            let image = PFFile(name: "image.jpg", data: imageData!)
+                            
+//                            let req = Alamofie.request(.GET, imageUrl!)
+//                            Alamofire.
+//                            req.response() { (request, response, data, error) in
+//                                if error == nil {
+//                                    dispatch_async(dispatch_get_main_queue()) { () in
+//                                        self.photoImage.image = UIImage(data: data as NSData)
+//                                    }
+//                                }
+//                            }
+                            
+//                            let imageUIData = NSData(contentsOfURL: imageUrl!)
+//                            let UIImg = UIImage(data:imageUIData!);
+//
+//                            let imageData = UIImageJPEGRepresentation(UIImg!, 0.8)
+//                            let image = PFFile(name: "image.jpeg",data: imageData!)
+//                            let imageData = UIImagePNGRepresentation(Uimg!)
 //                            let file = PFFile(data: UIImageJPEGRepresentation(Uimg!, 1.0)!)
                             let user = User(username: name, age: age, gender: userGender!, image: image!, password: password, email: email)
                             user.signUp({ (message) -> Void in
