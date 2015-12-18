@@ -92,12 +92,13 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                             let password = result.valueForKey("id") as! String
                             let imageUrl = NSURL(string: result.valueForKey("picture")!.valueForKey("data")?.valueForKey("url") as! String)
                             
-                            let imageView = UIImageView()
-                            imageView.af_setImageWithURL(imageUrl!)
-                            imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-                            let imageData = UIImageJPEGRepresentation(imageView.image!, 0.8)
-                            let image = PFFile(name: "image.jpg", data: imageData!)
-                            
+//                            let imageView = UIImageView()
+//                            imageView.af_setImageWithURL(imageUrl!)
+//                            print(imageView.image)
+//                            imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+//                            let imageData = UIImageJPEGRepresentation(imageView.image!, 0.8)
+//                            let image = PFFile(name: "image.jpg", data: imageData!)
+//
     
 //                            let req = NSURLRequest(URL:imageUrl!)
 //                            //非同期で変換
@@ -117,13 +118,17 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 //                                }
 //                            }
                             
-//                            let imageUIData = NSData(contentsOfURL: imageUrl!)
-//                            let UIImg = UIImage(data:imageUIData!);
-//
-//                            let imageData = UIImageJPEGRepresentation(UIImg!, 0.8)
+                            let imageUIData = NSData(contentsOfURL: imageUrl!)
+                            let UIImg = UIImage(data:imageUIData!);
+
+//                            let imageData = UIImageJPEGRepresentation(UIImg!, 1.0)
 //                            let image = PFFile(name: "image.jpeg",data: imageData!)
-//                            let imageData = UIImagePNGRepresentation(Uimg!)
-//                            let file = PFFile(data: UIImageJPEGRepresentation(Uimg!, 1.0)!)
+                            
+//                            let ratio = UIImg.size.width / UIImg.size.height
+//                            image = resizeIm
+                            let imageData = UIImagePNGRepresentation(UIImg!)!
+                            let image = PFFile(name: "image.png", data: imageData)
+//                            let file = PFFile(data: UIImageJPEGRepresentation(UIImg!))
                             let user = User(username: name, age: age, gender: userGender!, image: image!, password: password, email: email)
                             user.signUp({ (message) -> Void in
                                 print("サインアップしました")

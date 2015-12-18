@@ -9,6 +9,10 @@
 import UIKit
 
 class MessageListTableViewCell: UITableViewCell {
+    @IBOutlet weak var listPfofileView: UIImageView!
+    @IBOutlet weak var listName: UILabel!
+    @IBOutlet weak var listText: UILabel!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
