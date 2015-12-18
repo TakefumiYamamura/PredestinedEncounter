@@ -45,10 +45,10 @@ class MessageListTableViewController: UITableViewController {
         return cell
     }
     
-//    //セルの高さ
-//    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        return 75
-//    }
+    //セルの高さ
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
     
 
 
