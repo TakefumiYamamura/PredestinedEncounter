@@ -13,6 +13,8 @@ class MessageListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         self.tableView.registerNib(UINib(nibName: "MessageListTableViewCell", bundle: nil), forCellReuseIdentifier: "MessageListTableViewCell")
 
         // Uncomment the following line to preserve selection between presentations
@@ -42,6 +44,7 @@ class MessageListTableViewController: UITableViewController {
     //セルの内容
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MessageListTableViewCell", forIndexPath: indexPath) as! MessageListTableViewCell
+        cell.imageView?.image = UIImage(named: "cute_girl.jpg")
         return cell
     }
     
@@ -49,6 +52,11 @@ class MessageListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("showMessageViewController",sender: nil)
+    }
+
     
 
 
