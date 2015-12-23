@@ -42,7 +42,11 @@ class User: NSObject {
         user["gender"] = gender
         user["age"] = age
         user.signUpInBackgroundWithBlock { (success, error) in
-            callback(message: error?.userInfo["error"] as? String)
+            if let unwrappedError = error {
+                print("サインップ失敗")
+            } else {
+                print("サインアップ成功")
+            }
         }
     }
 
