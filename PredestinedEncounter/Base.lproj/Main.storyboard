@@ -158,6 +158,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="qoo-6a-wvh" kind="relationship" relationship="rootViewController" id="qmk-vm-AIp"/>
+                        <segue destination="Lfh-Pz-y9s" kind="show" identifier="modalLoginViewController" id="Hen-ZR-5kW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWl-pf-guB" userLabel="First Responder" sceneMemberID="firstResponder"/>

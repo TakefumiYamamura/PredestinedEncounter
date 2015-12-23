@@ -164,12 +164,12 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     
     func loginButton(loginButton: FBSDKLoginButton!,didCompleteWithResult
         result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-            print("User Logged In")
             
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        print("User Logged Out")
+        PFUser.logOut()
+        self.performSegueWithIdentifier("modalLoginViewController", sender: self)
     }
     
     func logout(){

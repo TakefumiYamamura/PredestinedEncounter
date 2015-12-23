@@ -97,6 +97,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
+        self.performSegueWithIdentifier("modalLoginViewController", sender: self)
+        PFUser.logOut()
+        
     }
     
     
