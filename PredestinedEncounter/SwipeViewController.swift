@@ -37,34 +37,6 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.delegate = self
-        
-        //fb情報取得
-        let graphRequest: FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "name, email, gender, age_range, picture.type(large), id"])
-        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            if ((error) != nil) {
-                print("Error: \(error)")
-            } else {
-                print(result)
-                let name = result.valueForKey("name") as! NSString
-                let email = result.valueForKey("email") as! NSString
-                let gender = result.valueForKey("gender") as! NSString
-                print(result.valueForKey("age_range")!.valueForKey("min") as! NSInteger)
-                //                            let password = String(result.valueForKey("id"))
-                //                            let user = User(username: name, age: <#T##String#>, gender: <#T##UserGender#>, image: <#T##PFFile#>, password: <#T##String#>)
-                //                            user.signUp{(message) in
-                //                                if let unwrappedMessage = message {
-                //                                    print("サインアップ失敗")
-                //                                }else{
-                //                                    print("サインアップ成功")
-                //                                }
-                //
-                //                            }
-                //                let profileImageURL : String = reu.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as! String
-                //                var profileImage = UIImage(data: NSData(contentsOfURL: NSURL(string: profileImageURL)!)!)
-                print("Name: \(name), Email: \(email), Gender: \(gender)")
-            }
-        })
-        
 //        let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
 //        backgroundView.image = UIImage(named: "couple-running-beach.jpg")
 //        backgroundView.contentMode = UIViewContentMode.ScaleAspectFill
@@ -175,6 +147,8 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     func logout(){
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
+        PFUser.logOut()
+        self.performSegueWithIdentifier("modalLoginViewController", sender: self)
     }
     
     

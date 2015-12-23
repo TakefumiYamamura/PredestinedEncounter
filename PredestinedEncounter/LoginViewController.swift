@@ -113,16 +113,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
         return label
     }
-    
-//    func didTouchButton(){
-//        let loginManger = FBSDKLoginManager()
-//        loginManger.logOut()
-//        print("dfadsfaf")
-//    }
-    
-    
-    
-    
 
     /*
     // MARK: - Navigation
