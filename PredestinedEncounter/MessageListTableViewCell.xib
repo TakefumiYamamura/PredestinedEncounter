@@ -15,21 +15,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="368" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qtZ-K9-SZM">
-                        <rect key="frame" x="8" y="8" width="63" height="63"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="99" id="0q5-8E-fPC"/>
-                            <constraint firstAttribute="width" constant="63" id="JVx-8G-RHV"/>
-                            <constraint firstAttribute="height" constant="63" id="UUM-W1-TR9"/>
-                            <constraint firstAttribute="height" constant="99" id="kcE-FG-ku8"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="0q5-8E-fPC"/>
-                                <exclude reference="kcE-FG-ku8"/>
-                            </mask>
-                        </variation>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAn-dR-nIn">
                         <rect key="frame" x="51" y="40" width="0.0" height="0.0"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -48,6 +33,21 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qtZ-K9-SZM">
+                        <rect key="frame" x="8" y="8" width="63" height="63"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="99" id="0q5-8E-fPC"/>
+                            <constraint firstAttribute="width" constant="63" id="JVx-8G-RHV"/>
+                            <constraint firstAttribute="height" constant="63" id="UUM-W1-TR9"/>
+                            <constraint firstAttribute="height" constant="99" id="kcE-FG-ku8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0q5-8E-fPC"/>
+                                <exclude reference="kcE-FG-ku8"/>
+                            </mask>
+                        </variation>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="qtZ-K9-SZM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="21h-an-x3U"/>
@@ -76,8 +76,8 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="listImageview" destination="qtZ-K9-SZM" id="P3j-UB-weJ"/>
                 <outlet property="listName" destination="ehR-Mf-dHD" id="Vk1-gd-JY7"/>
-                <outlet property="listPfofileView" destination="qtZ-K9-SZM" id="1Zd-FM-YGJ"/>
                 <outlet property="listText" destination="RAK-MK-0iU" id="fVV-bt-bfd"/>
             </connections>
             <point key="canvasLocation" x="169" y="169"/>

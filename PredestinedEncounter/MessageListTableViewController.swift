@@ -47,15 +47,13 @@ class MessageListTableViewController: UITableViewController {
     //セルの内容
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MessageListTableViewCell", forIndexPath: indexPath) as! MessageListTableViewCell
-        print((cell.imageView?.frame.size.width)!)
-        cell.imageView!.layer.cornerRadius = cell.imageView!.frame.size.width / 2
         let user =  PFUser.currentUser()!
-        print(user["image"] as! String)
         let imageUrl = NSURL(string: user["image"] as! String)
         let imageData = NSData(contentsOfURL: imageUrl!)
-        cell.imageView!.image = UIImage(data: imageData!)
-        cell.imageView!.contentMode = UIViewContentMode.ScaleAspectFill
-        cell.imageView!.clipsToBounds = true
+        cell.listImageview.image = UIImage(data: imageData!)
+        cell.listImageview.layer.cornerRadius = cell.listImageview.frame.size.width / 2
+        cell.listImageview.contentMode = UIViewContentMode.ScaleAspectFill
+        cell.listImageview.clipsToBounds = true
         return cell
     }
     
