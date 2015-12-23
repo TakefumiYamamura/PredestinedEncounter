@@ -45,12 +45,17 @@ class MessageListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MessageListTableViewCell", forIndexPath: indexPath) as! MessageListTableViewCell
         cell.imageView?.image = UIImage(named: "cute_girl.jpg")
+        cell.imageView!.layer.frame = CGRect(x: 10, y: 10, width: 60, height: 60)
+        print((cell.imageView?.frame.size.width)!)
+        cell.imageView!.layer.cornerRadius = (cell.imageView?.frame.size.width)!/2
+        cell.imageView?.clipsToBounds = true
+        cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
         return cell
     }
     
     //セルの高さ
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        return 80
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
