@@ -20,11 +20,11 @@ class User: NSObject {
     var username: String
     var age: Int
     var gender: String
-    var image: PFFile
+    var image: String
     var password: String
     var email: String
 
-    init(username: String, age: Int, gender: UserGender, image: PFFile, password: String, email: String){
+    init(username: String, age: Int, gender: UserGender, image: String, password: String, email: String){
         self.username = username
         self.age = age
         self.gender = gender.rawValue
