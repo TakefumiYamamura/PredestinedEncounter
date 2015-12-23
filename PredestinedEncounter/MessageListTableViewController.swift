@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Parse
+import AlamofireImage
+import Alamofire
 
 
 class MessageListTableViewController: UITableViewController {
@@ -44,12 +47,15 @@ class MessageListTableViewController: UITableViewController {
     //セルの内容
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MessageListTableViewCell", forIndexPath: indexPath) as! MessageListTableViewCell
-        cell.imageView?.image = UIImage(named: "cute_girl.jpg")
-        cell.imageView!.layer.frame = CGRect(x: 10, y: 10, width: 60, height: 60)
         print((cell.imageView?.frame.size.width)!)
-        cell.imageView!.layer.cornerRadius = (cell.imageView?.frame.size.width)!/2
-        cell.imageView?.clipsToBounds = true
-        cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
+        cell.imageView!.layer.cornerRadius = cell.imageView!.frame.size.width / 2
+        let user =  PFUser.currentUser()!
+        print(user["image"] as! String)
+        let imageUrl = NSURL(string: user["image"] as! String)
+        let imageData = NSData(contentsOfURL: imageUrl!)
+        cell.imageView!.image = UIImage(data: imageData!)
+        cell.imageView!.contentMode = UIViewContentMode.ScaleAspectFill
+        cell.imageView!.clipsToBounds = true
         return cell
     }
     
