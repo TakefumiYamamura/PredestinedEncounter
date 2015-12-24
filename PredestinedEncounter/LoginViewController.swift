@@ -90,7 +90,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                                         if let unwrappedMessage = message {
                                             print("サインイン失敗")
                                         } else {
-                                            print("サインイン成功")
+                                            user.login({ (message) -> Void in
+                                                print("サインイン成功")
+                                            })
                                         }
                                     })
                                 } else {

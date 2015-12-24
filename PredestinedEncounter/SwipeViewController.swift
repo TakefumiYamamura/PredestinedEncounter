@@ -50,8 +50,6 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
 //        coverView.backgroundColor = UIColor.blackColor()
 //        coverView.alpha = 0.7
 //        self.view.addSubview(coverView)
-        
-//    
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
         options.likedText = "LIKE"
@@ -64,26 +62,21 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
                 print("Photo saved!")
             }
         }
-    
         let swipeView = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
-//        view.autoresizingMask = []
-//        let view = NDCSwipeTo
-        
+//        let imageUrl = NSURL(string: PFUser.currentUser()!["image"] as! String)
+//        let imageData = NSData(contentsOfURL: imageUrl!)
+//        swipeView.imageView.image = UIImage(data: imageData!)
         swipeView.imageView.image = UIImage(named: "cute_girl.jpg")
         swipeView.imageView.frame = CGRectMake(0, 0, self.view.frame.width - 40, self.view.frame.width - 40 )
-//        view.imageView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleTopMargin]
         swipeView.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width + 30)
         
-        let nameLabel = UILabel(frame: CGRect(x: 15, y: self.view.frame.width - 30, width: 100, height: 50))
-        nameLabel.text = "むぅむ" + ",　" + "20"
-//        nameLabel.font = UIFont(name: "Helvetica-Bold", size: 15)
-//        let ageLabel  = UILabel(frame: CGRect(x: self.view.frame.width/2, y: self.view.frame.width - 30, width: 100, height: 50))
-//        ageLabel.text = "22" + "years "
-//        
-//        swipeView.addSubview(ageLabel)
+        let nameLabel = UILabel(frame: CGRect(x: 15, y: self.view.frame.width - 30, width: self.view.frame.width, height: 50))
+        nameLabel.text = "Megumi Kuwahara" + ",　" + "20"
+
         swipeView.addSubview(nameLabel)
         
         self.view.addSubview(swipeView)
+        self.view.insertSubview(swipeView, aboveSubview: swipeView)
         
         likeButton.setImage(UIImage(named: "like47.png"), forState: .Normal)
         nopeButton.setImage(UIImage(named: "close33.png"), forState: .Normal)
@@ -144,6 +137,38 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         if wasChosenWithDirection == MDCSwipeDirection.Right {
             print("Photo saved!")
         }
+        
+        
+        
+        let options = MDCSwipeToChooseViewOptions()
+        options.delegate = self
+        options.likedText = "LIKE"
+        options.likedColor = UIColor.blueColor()
+        options.nopeText = "NOPE"
+        options.onPan = { state -> Void in
+            if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Left {
+                print("Photo deleted!")
+            } else if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Right {
+                print("Photo saved!")
+            }
+        }
+        let swipeView = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
+        //        let imageUrl = NSURL(string: PFUser.currentUser()!["image"] as! String)
+        //        let imageData = NSData(contentsOfURL: imageUrl!)
+        //        swipeView.imageView.image = UIImage(data: imageData!)
+        swipeView.imageView.image = UIImage(named: "cute_girl.jpg")
+        swipeView.imageView.frame = CGRectMake(0, 0, self.view.frame.width - 40, self.view.frame.width - 40 )
+        swipeView.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width + 30)
+        
+        let nameLabel = UILabel(frame: CGRect(x: 15, y: self.view.frame.width - 30, width: self.view.frame.width, height: 50))
+        nameLabel.text = "Megumi Kuwahara" + ",　" + "20"
+        
+        swipeView.addSubview(nameLabel)
+        
+        self.view.addSubview(swipeView)
+        
+        
+        
     }
     
     func toMessageListViewController(){
@@ -156,6 +181,8 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        let loginManager = FBSDKLoginManager()
+        loginManager.logOut()
         PFUser.logOut()
         self.performSegueWithIdentifier("modalLoginViewController", sender: self)
     }
