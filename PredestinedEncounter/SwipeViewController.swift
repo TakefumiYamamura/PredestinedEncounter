@@ -17,6 +17,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     let likeButton = UIButtonAnimated()
     let nopeButton = UIButtonAnimated()
     let loginButton = FBSDKLoginButton()
+    var users:[User] = []
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -62,10 +63,13 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         }
     
         let view = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
+//        view.autoresizingMask = []
+//        let view = NDCSwipeTo
         
         view.imageView.image = UIImage(named: "cute_girl.jpg")
-        view.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width - 40)
-        view.frame.height
+        view.imageView.frame = CGRectMake(0, 0, self.view.frame.width - 40, self.view.frame.width - 40 )
+//        view.imageView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleTopMargin]
+        view.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width + 30)
         
         self.view.addSubview(view)
         
