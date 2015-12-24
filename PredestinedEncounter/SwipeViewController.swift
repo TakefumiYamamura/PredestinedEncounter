@@ -17,7 +17,8 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     let likeButton = UIButtonAnimated()
     let nopeButton = UIButtonAnimated()
     let loginButton = FBSDKLoginButton()
-    var users:[User] = []
+//    var users:[User] = []
+    let userManger = UserManager.sharedInstance
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -37,6 +38,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        userManger.fetchUsers()
         loginButton.delegate = self
 //        let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
 //        backgroundView.image = UIImage(named: "couple-running-beach.jpg")
@@ -48,6 +50,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
 //        coverView.backgroundColor = UIColor.blackColor()
 //        coverView.alpha = 0.7
 //        self.view.addSubview(coverView)
+        
 //    
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
@@ -62,17 +65,25 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
             }
         }
     
-        let view = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
+        let swipeView = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
 //        view.autoresizingMask = []
 //        let view = NDCSwipeTo
         
-        view.imageView.image = UIImage(named: "cute_girl.jpg")
-        view.imageView.frame = CGRectMake(0, 0, self.view.frame.width - 40, self.view.frame.width - 40 )
+        swipeView.imageView.image = UIImage(named: "cute_girl.jpg")
+        swipeView.imageView.frame = CGRectMake(0, 0, self.view.frame.width - 40, self.view.frame.width - 40 )
 //        view.imageView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleTopMargin]
-        view.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width + 30)
+        swipeView.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width + 30)
         
-        self.view.addSubview(view)
+        let nameLabel = UILabel(frame: CGRect(x: 15, y: self.view.frame.width - 30, width: 100, height: 50))
+        nameLabel.text = "むぅむ" + ",　" + "20"
+//        nameLabel.font = UIFont(name: "Helvetica-Bold", size: 15)
+//        let ageLabel  = UILabel(frame: CGRect(x: self.view.frame.width/2, y: self.view.frame.width - 30, width: 100, height: 50))
+//        ageLabel.text = "22" + "years "
+//        
+//        swipeView.addSubview(ageLabel)
+        swipeView.addSubview(nameLabel)
         
+        self.view.addSubview(swipeView)
         
         likeButton.setImage(UIImage(named: "like47.png"), forState: .Normal)
         nopeButton.setImage(UIImage(named: "close33.png"), forState: .Normal)
