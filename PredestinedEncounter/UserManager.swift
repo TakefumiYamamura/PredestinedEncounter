@@ -2,7 +2,7 @@
 //  UserManager.swift
 //  PredestinedEncounter
 //
-//  Created by TakefumiYamamura on 2015/12/16.
+//  Created by TakefumiYamamura on 2015/12/24.
 //  Copyright © 2015年 ids. All rights reserved.
 //
 
@@ -17,26 +17,24 @@ class UserManager: NSObject {
     var users: [User] = []
     
     func fetchUsers() {
-        let query = PFUser.query
-        query.findObjectsInBackgroundWithBlock { (objects, error) in
+        let query = PFUser.query()
+        query!.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {
-                self.tweets = []
+                self.users = []
                 for object in objects! {
+                    object
                     let username = object["username"] as! String
                     let age = object["age"] as! Int
-//                    let gender = object["gender"]
+                    let gender = object["gender"] as! String
                     let image = object["image"] as! String
-                    let password = object["password"] as! String
-                    let email = object["emaiol"] as! String
-                    let text = object["text"] as! String
-//                    let user = User(usename: )
-//                    let user = User.init()
-
-//                    self.users.append(user)
-//                    self.tweets.append(tweet)
+                    let password = "dammypass"
+                    let email = object["email"] as! String
+                    let user = User(username: username, age: age, gender: UserGender(rawValue: gender)!, image: image, password: password, email: email)
+                    print(user)
+                    self.users.append(user)
                 }
             }
         }
     }
-
+    
 }

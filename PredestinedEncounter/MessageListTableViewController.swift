@@ -13,12 +13,14 @@ import Alamofire
 
 
 class MessageListTableViewController: UITableViewController {
+    let userManger = UserManager.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.registerNib(UINib(nibName: "MessageListTableViewCell", bundle: nil), forCellReuseIdentifier: "MessageListTableViewCell")
+        userManger.fetchUsers()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,17 +43,21 @@ class MessageListTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return userManger.users.count
     }
     
     //セルの内容
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MessageListTableViewCell", forIndexPath: indexPath) as! MessageListTableViewCell
-        let user =  PFUser.currentUser()!
-        let imageUrl = NSURL(string: user["image"] as! String)
+        let user = userManger.users[indexPath.row]
+//        let user =  PFUser.currentUser()!
+//        let imageUrl = NSURL(string: user["image"] as! String)
+        let imageUrl = NSURL(string: user.image)
         let imageData = NSData(contentsOfURL: imageUrl!)
         cell.listImageview.image = UIImage(data: imageData!)
         cell.listImageview.layer.cornerRadius = cell.listImageview.frame.size.width / 2
+        cell.listName.text = user.username
+        cell.listText.text = String(user.age)
         cell.listImageview.contentMode = UIViewContentMode.ScaleAspectFill
         cell.listImageview.clipsToBounds = true
         return cell
