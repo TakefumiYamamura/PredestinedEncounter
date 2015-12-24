@@ -60,17 +60,13 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!,didCompleteWithResult
         result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-            print("User Logged In")
-            
             if ((error) != nil)
             {
                 print("error")
             } else if result.isCancelled {
-                //キャンセルされた時
             } else {
                 if result.grantedPermissions.contains("email")
                 {
-
                     let graphRequest: FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "name, email, gender, age_range, picture.type(large), id"])
                     graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
                         if ((error) != nil) {
@@ -84,9 +80,28 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                             let password = result.valueForKey("id") as! String
                             let image = result.valueForKey("picture")!.valueForKey("data")?.valueForKey("url") as! String
                             let user = User(username: name, age: age, gender: userGender!, image: image, password: password, email: email)
-                            user.signUp({ (message) -> Void in
-                                print("サインアップしました")
-                            })
+                            let checkExist = PFUser.query()
+                            checkExist!.whereKey("username", equalTo: name)
+                            checkExist!.findObjectsInBackgroundWithBlock {
+                                (objects, error) -> Void in
+                                if(objects!.count > 0){
+                                    user.login({ (message) -> Void in
+                                        if let unwrappedMessage = message {
+                                            print("サインイン失敗")
+                                        } else {
+                                            print("サインイン成功")
+                                        }
+                                    })
+                                } else {
+                                    user.signUp({ (message) -> Void in
+                                        print("サインアップしました")
+                                    })
+                                }                       
+                            }
+
+//                            user.signUp({ (message) -> Void in
+//                                print("サインアップしました")
+//                            })
                         }
                     
                     })

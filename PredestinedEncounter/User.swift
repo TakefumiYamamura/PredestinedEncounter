@@ -43,10 +43,16 @@ class User: NSObject {
         user["age"] = age
         user.signUpInBackgroundWithBlock { (success, error) in
             if let unwrappedError = error {
-                print("サインップ失敗")
+                print("登録済み")
             } else {
                 print("サインアップ成功")
             }
+        }
+    }
+    
+    func login(callback: (message: String?) -> Void) {
+        PFUser.logInWithUsernameInBackground(username, password: password) { (user, error) in
+            callback(message: error?.userInfo["error"] as? String)
         }
     }
 

@@ -41,11 +41,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="0Zb-By-PbY" kind="show" identifier="ShowToMessageListTableViewController" id="2EE-E9-vyT"/>
+                        <segue destination="Lfh-Pz-y9s" kind="show" identifier="modalLoginViewController" id="IRP-se-6Y7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scc-Bn-Zv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2226.5" y="957.5"/>
+            <point key="canvasLocation" x="2172.5" y="755.5"/>
         </scene>
         <!--Message List Table View Controller-->
         <scene sceneID="qYw-Mf-Wfo">
@@ -78,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7D-s5-kMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2708.5" y="1105.5"/>
+            <point key="canvasLocation" x="2907.5" y="1082.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="f4N-aw-ev5">
@@ -142,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GuA-hU-t9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2559.5" y="-308.5"/>
+            <point key="canvasLocation" x="2585.5" y="-100.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cTM-Co-2tC">
@@ -158,7 +159,6 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="qoo-6a-wvh" kind="relationship" relationship="rootViewController" id="qmk-vm-AIp"/>
-                        <segue destination="Lfh-Pz-y9s" kind="show" identifier="modalLoginViewController" id="Hen-ZR-5kW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWl-pf-guB" userLabel="First Responder" sceneMemberID="firstResponder"/>
