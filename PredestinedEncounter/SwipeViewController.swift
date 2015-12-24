@@ -66,6 +66,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         view.imageView.image = UIImage(named: "cute_girl.jpg")
         view.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width - 40)
         view.frame.height
+        
         self.view.addSubview(view)
         
         
