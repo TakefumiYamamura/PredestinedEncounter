@@ -10,7 +10,7 @@ class UserManager: NSObject {
     var users: [User] = []
     var swipeUsers: [User] = []
     var matchingUsers: [User] = []
-    func fetchUsers() {
+    func fetchUsers(callback: () -> Void) {
         let query = PFUser.query()
         query!.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {
@@ -28,6 +28,7 @@ class UserManager: NSObject {
                     self.users.append(user)
                 }
             }
+            callback()
         }
     }
     

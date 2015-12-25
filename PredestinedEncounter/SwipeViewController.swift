@@ -20,7 +20,6 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         super.viewDidLoad()
         loginButton.delegate = self
         userManger.fetchSwipeUsers { () -> Void in
-            print("success callback")
             if let swipeView = self.popSwipeView(){
                 self.view.addSubview(swipeView)
             }

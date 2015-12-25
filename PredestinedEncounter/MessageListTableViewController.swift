@@ -6,13 +6,22 @@ import Alamofire
 
 class MessageListTableViewController: UITableViewController {
     let userManger = UserManager.sharedInstance
+    var refresh: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        userManger.fetchUsers { () -> Void in
+            self.tableView.reloadData()
+        }
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.registerNib(UINib(nibName: "MessageListTableViewCell", bundle: nil), forCellReuseIdentifier: "MessageListTableViewCell")
-        userManger.fetchUsers()
+        
+        self.refresh = UIRefreshControl()
+        self.refresh.attributedTitle = NSAttributedString(string: "Loading...")
+        self.refresh.addTarget(self, action: "pullToRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(self.refresh)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +48,11 @@ class MessageListTableViewController: UITableViewController {
         cell.listImageview.contentMode = UIViewContentMode.ScaleAspectFill
         cell.listImageview.clipsToBounds = true
         return cell
+    }
+    
+    func pullToRefresh(){
+        self.tableView.reloadData()
+        self.refresh.endRefreshing()
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
