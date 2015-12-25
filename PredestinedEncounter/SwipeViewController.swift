@@ -23,19 +23,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +67,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         self.title = "mu-mu-"
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
 //        self.navigationItem.rightBarButtonItem?.image = UIImage(named: "social12.png")
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "social12.png"), style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
+
 //        self.navigationController?.navigationBar.frame = CGRectMake(self.view.center.x, 16, 32, 32)
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "Mu-Mu--logo.png"), forBarMetrics: UIBarMetrics.Default)
 //        self.navigationController!.navigationBar.titleTextAttributes =
@@ -92,8 +80,9 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "LogOut", style: UIBarButtonItemStyle.Plain, target: self, action: "logout")
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "LogOut", style: UIBarButtonItemStyle.Plain, target: self, action: "logout")
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "social12.png"), style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
     }
     
     
@@ -131,9 +120,12 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
 
     }
     
-    func toMessageListViewController(){
+    @IBAction func toMessageListViewController(sender: AnyObject) {
         self.performSegueWithIdentifier("ShowToMessageListTableViewController", sender: nil)
     }
+//    func toMessageListViewController(){
+//        self.performSegueWithIdentifier("ShowToMessageListTableViewController", sender: nil)
+//    }
     
     func loginButton(loginButton: FBSDKLoginButton!,didCompleteWithResult
         result: FBSDKLoginManagerLoginResult!, error: NSError!) {
@@ -147,13 +139,19 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         self.performSegueWithIdentifier("modalLoginViewController", sender: self)
     }
     
-    func logout(){
+//    func logout(){
+//        let loginManager = FBSDKLoginManager()
+//        loginManager.logOut()
+//        PFUser.logOut()
+//        self.performSegueWithIdentifier("modalLoginViewController", sender: self)
+//    }
+    
+    @IBAction func logout(sender: AnyObject) {
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
         PFUser.logOut()
         self.performSegueWithIdentifier("modalLoginViewController", sender: self)
     }
-    
     func popSwipeView() -> MDCSwipeToChooseView?{
         print(userManger.swipeUsers)
         if(userManger.swipeUsers.count == 0){

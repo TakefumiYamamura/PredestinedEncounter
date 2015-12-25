@@ -37,7 +37,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="p6s-aE-59S"/>
+                    <navigationItem key="navigationItem" id="p6s-aE-59S">
+                        <barButtonItem key="leftBarButtonItem" image="social12.png" style="plain" id="Fy2-tY-NKT">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qYQ-WQ-aeD">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="logout13.png"/>
+                                <connections>
+                                    <action selector="logout:" destination="qoo-6a-wvh" eventType="touchUpInside" id="YbI-us-UW5"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="gOg-fM-tAW">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uin-Vb-zqT">
+                                <rect key="frame" x="329" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="multiple25.png"/>
+                                <connections>
+                                    <action selector="toMessageListViewController:" destination="qoo-6a-wvh" eventType="touchUpInside" id="Igo-CY-elk"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="0Zb-By-PbY" kind="show" identifier="ShowToMessageListTableViewController" id="2EE-E9-vyT"/>
@@ -46,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scc-Bn-Zv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2172.5" y="755.5"/>
+            <point key="canvasLocation" x="2059.5" y="912.5"/>
         </scene>
         <!--Message List Table View Controller-->
         <scene sceneID="qYw-Mf-Wfo">
@@ -169,5 +190,8 @@
     <resources>
         <image name="Mu-Mu--logo_white.png" width="400" height="316"/>
         <image name="couple-running-beach.jpg" width="5616" height="3744"/>
+        <image name="logout13.png" width="512" height="512"/>
+        <image name="multiple25.png" width="512" height="512"/>
+        <image name="social12.png" width="512" height="512"/>
     </resources>
 </document>
