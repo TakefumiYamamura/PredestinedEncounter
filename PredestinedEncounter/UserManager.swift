@@ -23,14 +23,14 @@ class UserManager: NSObject {
             if error == nil {
                 self.users = []
                 for object in objects! {
-                    object
+                    let objectId = object.objectId
                     let username = object["username"] as! String
                     let age = object["age"] as! Int
                     let gender = object["gender"] as! String
                     let image = object["image"] as! String
                     let password = "dammypass"
                     let email = object["email"] as! String
-                    let user = User(username: username, age: age, gender: UserGender(rawValue: gender)!, image: image, password: password, email: email)
+                    let user = User(objectId: objectId!, username: username, age: age, gender: UserGender(rawValue: gender)!, image: image, password: password, email: email)
                     print(user)
                     self.users.append(user)
                 }
@@ -44,14 +44,14 @@ class UserManager: NSObject {
             if error == nil {
                 self.users = []
                 for object in objects! {
-                    object
+                    let objectId = object.objectId!
                     let username = object["username"] as! String
                     let age = object["age"] as! Int
                     let gender = object["gender"] as! String
                     let image = object["image"] as! String
                     let password = "dammypass"
                     let email = object["email"] as! String
-                    let user = User(username: username, age: age, gender: UserGender(rawValue: gender)!, image: image, password: password, email: email)
+                    let user = User(objectId: objectId, username: username, age: age, gender: UserGender(rawValue: gender)!, image: image, password: password, email: email)
                     print(user)
                     self.swipeUsers.append(user)
                 }

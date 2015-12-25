@@ -17,6 +17,7 @@ enum UserGender: String {
 }
 
 class User: NSObject {
+    var objectId: String
     var username: String
     var age: Int
     var gender: String
@@ -24,7 +25,8 @@ class User: NSObject {
     var password: String
     var email: String
 
-    init(username: String, age: Int, gender: UserGender, image: String, password: String, email: String){
+    init(objectId: String, username: String, age: Int, gender: UserGender, image: String, password: String, email: String){
+        self.objectId = objectId
         self.username = username
         self.age = age
         self.gender = gender.rawValue
@@ -35,6 +37,7 @@ class User: NSObject {
     
     func signUp(callback: (message: String?) -> Void) {
         let user = PFUser()
+        user.objectId = objectId
         user.username = username
         user.password = password
         user.email = email

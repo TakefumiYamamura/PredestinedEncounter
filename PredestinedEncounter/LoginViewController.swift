@@ -80,7 +80,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                             let age = result.valueForKey("age_range")!.valueForKey("min") as! Int
                             let password = result.valueForKey("id") as! String
                             let image = result.valueForKey("picture")!.valueForKey("data")?.valueForKey("url") as! String
-                            let user = User(username: name, age: age, gender: userGender!, image: image, password: password, email: email)
+                            let user = User(objectId: "dummy", username: name, age: age, gender: userGender!, image: image, password: password, email: email)
                             let checkExist = PFUser.query()
                             checkExist!.whereKey("username", equalTo: name)
                             checkExist!.findObjectsInBackgroundWithBlock {
