@@ -66,9 +66,11 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         
         likeButton.frame.size = CGSize(width: 70, height: 70)
         likeButton.center = CGPoint(x: self.view.center.x + 70, y: self.view.frame.height - 70)
+        likeButton.addTarget(self, action: "likeFrontCardView", forControlEvents: UIControlEvents.TouchUpInside)
         
         nopeButton.frame.size = CGSize(width: 70, height: 70)
         nopeButton.center = CGPoint(x: self.view.center.x - 70, y: self.view.frame.height - 70)
+        nopeButton.addTarget(self, action: "nopeFrontCardView", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(likeButton)
         self.view.addSubview(nopeButton)
@@ -125,9 +127,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         if let swipeView = popSwipeView(){
             self.view.addSubview(swipeView)
         }
-        
-        
-        
+
     }
     
     func toMessageListViewController(){
@@ -183,5 +183,15 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         nameLabel.text = user.username + ",　" + String(user.age)
         swipeView.addSubview(nameLabel)
         return swipeView
+    }
+    
+    func nopeFrontCardView() -> Void{
+        self.view.subviews[4].mdc_swipe(MDCSwipeDirection.Left)
+        print(self.view.subviews)
+//        self.view.mdc_swipe(MDCSwipeDirection.Left)
+    }
+    func likeFrontCardView() -> Void{
+        self.view.subviews[4].mdc_swipe(MDCSwipeDirection.Right)
+//        self.frontCardView.mdc_swipe(MDCSwipeDirection.Right)
     }
 }
