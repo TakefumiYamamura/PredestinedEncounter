@@ -1,11 +1,3 @@
-//
-//  LoginViewController.swift
-//  PredestinedEncounter
-//
-//  Created by TakefumiYamamura on 2015/12/12.
-//  Copyright © 2015年 ids. All rights reserved.
-//
-
 import UIKit
 import Parse
 import FBSDKCoreKit
@@ -41,13 +33,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.delegate = self
         loginButton.readPermissions = ["email", "public_profile", "user_friends"]
         view.addSubview(loginButton)
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -114,8 +103,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         PFUser.logOut()
     }
     
-    
-    
     func makeShadow(label: UILabel) -> UILabel {
         label.layer.shadowRadius = 0
         label.layer.shadowOffset = CGSize(width: 3, height: 3)
@@ -125,15 +112,5 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
         return label
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
