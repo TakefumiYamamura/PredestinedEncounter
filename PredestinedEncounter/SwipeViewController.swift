@@ -38,9 +38,10 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         self.view.addSubview(likeButton)
         self.view.addSubview(nopeButton)
         
-        self.navigationController!.navigationBar.barTintColor = UIColor.hexStr("#77D4DA", alpha: 1)
-        self.title = "Mu-Mu-"
-        self.navigationController!.navigationItem.titleView = UIImageView(image: UIImage(named: "Mu-Mu--logo.png"))
+        self.navigationController!.navigationBar.barTintColor = UIColor.hexStr("#7ec8ce", alpha: 1)
+//        self.title = "Mu-Mu-"
+//        self.navigationItem.titleView
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "Icon-40@2x.png"))
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
     

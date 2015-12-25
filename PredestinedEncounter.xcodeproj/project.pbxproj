@@ -39,6 +39,7 @@
 		E7A545121C2CEC120028D066 /* logout13.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A545111C2CEC120028D066 /* logout13.png */; };
 		E7A545141C2CEE800028D066 /* multiple25.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A545131C2CEE800028D066 /* multiple25.png */; };
 		E7A545161C2CF51B0028D066 /* mumu.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A545151C2CF51B0028D066 /* mumu.png */; };
+		E7A545181C2D0B570028D066 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A545171C2D0B560028D066 /* Icon-40@2x.png */; };
 		E7C9F16B1C2439DF00A32438 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9F16A1C2439DF00A32438 /* MessageViewController.swift */; };
 		E7ECC93A1C1DA6D0008A20D6 /* social12 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = E7ECC9371C1DA6D0008A20D6 /* social12 (1).png */; };
 		E7ECC93B1C1DA6D0008A20D6 /* social12 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = E7ECC9381C1DA6D0008A20D6 /* social12 (2).png */; };
@@ -104,6 +105,7 @@
 		E7A545111C2CEC120028D066 /* logout13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logout13.png; path = ../../Downloads/logout13.png; sourceTree = "<group>"; };
 		E7A545131C2CEE800028D066 /* multiple25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = multiple25.png; path = ../../Downloads/multiple25.png; sourceTree = "<group>"; };
 		E7A545151C2CF51B0028D066 /* mumu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mumu.png; path = ../../Pictures/mumu.png; sourceTree = "<group>"; };
+		E7A545171C2D0B560028D066 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-40@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-40@2x.png"; sourceTree = "<group>"; };
 		E7C9F16A1C2439DF00A32438 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		E7ECC9371C1DA6D0008A20D6 /* social12 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "social12 (1).png"; path = "../../Downloads/social12 (1).png"; sourceTree = "<group>"; };
 		E7ECC9381C1DA6D0008A20D6 /* social12 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "social12 (2).png"; path = "../../Downloads/social12 (2).png"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				E76C444C1C1C4EB80023237A /* Mu-Mu--logo.png */,
 				E76C44481C1C20360023237A /* couple-running-beach.jpg */,
 				E73A56EA1C017E480005EA9B /* yamamura.jpg */,
+				E7A545171C2D0B560028D066 /* Icon-40@2x.png */,
 				E73A56E81C017E3C0005EA9B /* cute_girl.jpg */,
 			);
 			name = images;
@@ -403,6 +406,7 @@
 				E73A56E91C017E3C0005EA9B /* cute_girl.jpg in Resources */,
 				E76C44591C1CA8900023237A /* close33.png in Resources */,
 				E7A545121C2CEC120028D066 /* logout13.png in Resources */,
+				E7A545181C2D0B570028D066 /* Icon-40@2x.png in Resources */,
 				E7698CA51C00D7F100AB7FB7 /* Main.storyboard in Resources */,
 				E76C44671C1CCE580023237A /* lights-night-dark-abstract.jpeg in Resources */,
 			);
