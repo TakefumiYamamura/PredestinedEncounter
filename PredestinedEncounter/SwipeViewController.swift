@@ -75,8 +75,9 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         self.view.addSubview(likeButton)
         self.view.addSubview(nopeButton)
         
-//        self.navigationController!.navigationBar.barTintColor = UIColor.blackColor()
+        self.navigationController!.navigationBar.barTintColor = UIColor.hexStr("#77D4DA", alpha: 1)
         self.title = "mu-mu-"
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
 //        self.navigationItem.rightBarButtonItem?.image = UIImage(named: "social12.png")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "social12.png"), style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
 //        self.navigationController?.navigationBar.frame = CGRectMake(self.view.center.x, 16, 32, 32)
@@ -194,4 +195,6 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         self.view.subviews[4].mdc_swipe(MDCSwipeDirection.Right)
 //        self.frontCardView.mdc_swipe(MDCSwipeDirection.Right)
     }
+    
+
 }
