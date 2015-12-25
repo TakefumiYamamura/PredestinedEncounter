@@ -21,6 +21,7 @@ class MessageListTableViewController: UITableViewController {
         self.refresh.attributedTitle = NSAttributedString(string: "Loading...")
         self.refresh.addTarget(self, action: "pullToRefresh", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(self.refresh)
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "multiple25.png"))
 
     }
 
@@ -61,6 +62,10 @@ class MessageListTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("showMessageViewController",sender: nil)
+    }
+    @IBAction func tapBackButton(sender: UIButton) {
+        
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
 }

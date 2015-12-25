@@ -37,11 +37,11 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         
         self.view.addSubview(likeButton)
         self.view.addSubview(nopeButton)
-        
-        self.navigationController!.navigationBar.barTintColor = UIColor.hexStr("#7ec8ce", alpha: 1)
-//        self.title = "Mu-Mu-"
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 119/255.0, green: 212/255.0, blue: 218/255.0, alpha: 1)//        self.title = "Mu-Mu-"
 //        self.navigationItem.titleView
-        self.navigationItem.titleView = UIImageView(image: UIImage(named: "Icon-40@2x.png"))
+//        self.navigationController!.navigationBar.translucent  = false
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "logo.png"))
+        
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
     
@@ -138,6 +138,10 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     }
     func likeFrontCardView() -> Void{
         self.view.subviews[4].mdc_swipe(MDCSwipeDirection.Right)
+    }
+    
+    @IBAction func unwindToSwipeView(segue: UIStoryboardSegue) {
+        
     }
     
 }

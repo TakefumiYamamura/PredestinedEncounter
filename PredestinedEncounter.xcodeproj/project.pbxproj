@@ -35,6 +35,8 @@
 		E76C446B1C1D26730023237A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C446A1C1D26730023237A /* Message.swift */; };
 		E76C446D1C1D3AAC0023237A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C446C1C1D3AAC0023237A /* FBSDKCoreKit.framework */; };
 		E76C446F1C1D3AC80023237A /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C446E1C1D3AC80023237A /* FBSDKShareKit.framework */; };
+		E78B6AE31C2D18C800E788E0 /* mini_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E78B6AE21C2D18C800E788E0 /* mini_logo.png */; };
+		E78B6AE71C2D1B6000E788E0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E78B6AE61C2D1B6000E788E0 /* logo.png */; };
 		E7A545101C2CE3560028D066 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A5450F1C2CE3560028D066 /* UIColorExtension.swift */; };
 		E7A545121C2CEC120028D066 /* logout13.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A545111C2CEC120028D066 /* logout13.png */; };
 		E7A545141C2CEE800028D066 /* multiple25.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A545131C2CEE800028D066 /* multiple25.png */; };
@@ -101,6 +103,8 @@
 		E76C446A1C1D26730023237A /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E76C446C1C1D3AAC0023237A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		E76C446E1C1D3AC80023237A /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		E78B6AE21C2D18C800E788E0 /* mini_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mini_logo.png; path = "../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/1C38092C-0072-49D9-85D9-C8FE4DFD341E/logo/ios/AppIcon.appiconset/mini_logo.png"; sourceTree = "<group>"; };
+		E78B6AE61C2D1B6000E788E0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../Desktop/logo.png; sourceTree = "<group>"; };
 		E7A5450F1C2CE3560028D066 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E7A545111C2CEC120028D066 /* logout13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logout13.png; path = ../../Downloads/logout13.png; sourceTree = "<group>"; };
 		E7A545131C2CEE800028D066 /* multiple25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = multiple25.png; path = ../../Downloads/multiple25.png; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				E76C44621C1CC7CD0023237A /* background.png */,
 				E76C44581C1CA8900023237A /* close33.png */,
 				E7A545131C2CEE800028D066 /* multiple25.png */,
+				E78B6AE21C2D18C800E788E0 /* mini_logo.png */,
+				E78B6AE61C2D1B6000E788E0 /* logo.png */,
 				E76C44561C1CA86D0023237A /* like47.png */,
 				E76C444E1C1C5B200023237A /* Mu-Mu--logo_white.png */,
 				E76C444C1C1C4EB80023237A /* Mu-Mu--logo.png */,
@@ -389,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7698CAA1C00D7F100AB7FB7 /* LaunchScreen.storyboard in Resources */,
+				E78B6AE71C2D1B6000E788E0 /* logo.png in Resources */,
 				E76C44631C1CC7CE0023237A /* background.png in Resources */,
 				E73A56EB1C017E480005EA9B /* yamamura.jpg in Resources */,
 				E76C445D1C1CAF850023237A /* MessageListTableViewCell.xib in Resources */,
@@ -398,6 +405,7 @@
 				E7698CA71C00D7F100AB7FB7 /* Assets.xcassets in Resources */,
 				E76C444F1C1C5B200023237A /* Mu-Mu--logo_white.png in Resources */,
 				E7ECC93A1C1DA6D0008A20D6 /* social12 (1).png in Resources */,
+				E78B6AE31C2D18C800E788E0 /* mini_logo.png in Resources */,
 				E7A545141C2CEE800028D066 /* multiple25.png in Resources */,
 				E7A545161C2CF51B0028D066 /* mumu.png in Resources */,
 				E76C44491C1C20360023237A /* couple-running-beach.jpg in Resources */,
