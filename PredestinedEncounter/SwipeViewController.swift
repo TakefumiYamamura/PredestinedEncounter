@@ -64,25 +64,15 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         self.view.addSubview(nopeButton)
         
         self.navigationController!.navigationBar.barTintColor = UIColor.hexStr("#77D4DA", alpha: 1)
-        self.title = "mu-mu-"
+        self.title = "Mu-Mu-"
+        self.navigationController!.navigationItem.titleView = UIImageView(image: UIImage(named: "Mu-Mu--logo.png"))
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-//        self.navigationItem.rightBarButtonItem?.image = UIImage(named: "social12.png")
-
-//        self.navigationController?.navigationBar.frame = CGRectMake(self.view.center.x, 16, 32, 32)
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "Mu-Mu--logo.png"), forBarMetrics: UIBarMetrics.Default)
-//        self.navigationController!.navigationBar.titleTextAttributes =
-//            [NSForegroundColorAttributeName: UIColor.whiteColor(),
-//                NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 20)!]
-//        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
     }
     
 
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "LogOut", style: UIBarButtonItemStyle.Plain, target: self, action: "logout")
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "social12.png"), style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
     }
     
     
@@ -123,9 +113,6 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     @IBAction func toMessageListViewController(sender: AnyObject) {
         self.performSegueWithIdentifier("ShowToMessageListTableViewController", sender: nil)
     }
-//    func toMessageListViewController(){
-//        self.performSegueWithIdentifier("ShowToMessageListTableViewController", sender: nil)
-//    }
     
     func loginButton(loginButton: FBSDKLoginButton!,didCompleteWithResult
         result: FBSDKLoginManagerLoginResult!, error: NSError!) {
@@ -139,19 +126,13 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         self.performSegueWithIdentifier("modalLoginViewController", sender: self)
     }
     
-//    func logout(){
-//        let loginManager = FBSDKLoginManager()
-//        loginManager.logOut()
-//        PFUser.logOut()
-//        self.performSegueWithIdentifier("modalLoginViewController", sender: self)
-//    }
-    
     @IBAction func logout(sender: AnyObject) {
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
         PFUser.logOut()
         self.performSegueWithIdentifier("modalLoginViewController", sender: self)
     }
+    
     func popSwipeView() -> MDCSwipeToChooseView?{
         print(userManger.swipeUsers)
         if(userManger.swipeUsers.count == 0){
@@ -187,11 +168,9 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     func nopeFrontCardView() -> Void{
         self.view.subviews[4].mdc_swipe(MDCSwipeDirection.Left)
         print(self.view.subviews)
-//        self.view.mdc_swipe(MDCSwipeDirection.Left)
     }
     func likeFrontCardView() -> Void{
         self.view.subviews[4].mdc_swipe(MDCSwipeDirection.Right)
-//        self.frontCardView.mdc_swipe(MDCSwipeDirection.Right)
     }
     
 

@@ -21,10 +21,11 @@ class MessageViewController: JSQMessagesViewController, PTPusherDelegate  {
     var messages: [JSQMessage]?
     var incomingBubble: JSQMessagesBubbleImage!
     var outgoingBubble: JSQMessagesBubbleImage!
+    var adminBubble: JSQMessagesBubbleImage!
     var incomingAvatar: JSQMessagesAvatarImage!
     var outgoingAvatar: JSQMessagesAvatarImage!
+    var adminAvatar: JSQMessagesAvatarImage!
 
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +40,13 @@ class MessageViewController: JSQMessagesViewController, PTPusherDelegate  {
         UIColor.jsq_messageBubbleBlueColor()
         self.incomingBubble = bubbleFactory.incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleGreenColor())
         self.outgoingBubble = bubbleFactory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleBlueColor())
-        
+        self.adminBubble = bubbleFactory.incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleRedColor())
         self.incomingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "cute_girl.jpg")!, diameter: 64)
         self.outgoingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "yamamura.jpg")!, diameter: 64)
-        
+        self.adminAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "mumu.png")!, diameter: 64)
         self.messages = []
+        let message = JSQMessage(senderId: "user3", displayName: "underscore", text: "マッチングおめでとうございます！まずは合コンをするにあたって，お二方の都合の良い場所を教えてください！")
+        self.messages?.append(message)
         
     }
 
@@ -72,8 +75,15 @@ class MessageViewController: JSQMessagesViewController, PTPusherDelegate  {
     //アイテムごとのMessageBubble(背景)を返す
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
         let message = self.messages?[indexPath.item]
-        if message?.senderId == self.senderId {
+        switch message!.senderId! {
+        case "user1":
             return self.outgoingBubble
+        case "user2":
+            return self.incomingBubble
+        case "user3":
+            return self.adminBubble
+        default:
+            break
         }
         return self.incomingBubble
     }
@@ -81,10 +91,17 @@ class MessageViewController: JSQMessagesViewController, PTPusherDelegate  {
     //アイテムごとにアバター画像を返す
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
         let message = self.messages?[indexPath.item]
-        if message?.senderId == self.senderId {
+        switch message!.senderId! {
+        case "user1":
             return self.outgoingAvatar
+        case "user2":
+            return self.incomingAvatar
+        case "user3":
+            return self.adminAvatar
+        default:
+            break
         }
-        return self.incomingAvatar
+        return self.adminAvatar
     }
     
     //アイテムの総数を返す
@@ -98,7 +115,7 @@ class MessageViewController: JSQMessagesViewController, PTPusherDelegate  {
     }
     
     func didFinishMessageTimer(sender: NSTimer) {
-        let message = JSQMessage(senderId: "user2", displayName: "underscore", text: "一目惚れしました♡　良かったらline教えて♡")
+        let message = JSQMessage(senderId: "user2", displayName: "underscore", text: "美月っていいます! 下北沢に住んでます！！　渋谷らへんでやりたいです！！！ ")
         self.messages?.append(message)
         self.finishReceivingMessageAnimated(true)
     }

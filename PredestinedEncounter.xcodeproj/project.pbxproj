@@ -38,6 +38,7 @@
 		E7A545101C2CE3560028D066 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A5450F1C2CE3560028D066 /* UIColorExtension.swift */; };
 		E7A545121C2CEC120028D066 /* logout13.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A545111C2CEC120028D066 /* logout13.png */; };
 		E7A545141C2CEE800028D066 /* multiple25.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A545131C2CEE800028D066 /* multiple25.png */; };
+		E7A545161C2CF51B0028D066 /* mumu.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A545151C2CF51B0028D066 /* mumu.png */; };
 		E7C9F16B1C2439DF00A32438 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9F16A1C2439DF00A32438 /* MessageViewController.swift */; };
 		E7ECC93A1C1DA6D0008A20D6 /* social12 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = E7ECC9371C1DA6D0008A20D6 /* social12 (1).png */; };
 		E7ECC93B1C1DA6D0008A20D6 /* social12 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = E7ECC9381C1DA6D0008A20D6 /* social12 (2).png */; };
@@ -102,6 +103,7 @@
 		E7A5450F1C2CE3560028D066 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E7A545111C2CEC120028D066 /* logout13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logout13.png; path = ../../Downloads/logout13.png; sourceTree = "<group>"; };
 		E7A545131C2CEE800028D066 /* multiple25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = multiple25.png; path = ../../Downloads/multiple25.png; sourceTree = "<group>"; };
+		E7A545151C2CF51B0028D066 /* mumu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mumu.png; path = ../../Pictures/mumu.png; sourceTree = "<group>"; };
 		E7C9F16A1C2439DF00A32438 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		E7ECC9371C1DA6D0008A20D6 /* social12 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "social12 (1).png"; path = "../../Downloads/social12 (1).png"; sourceTree = "<group>"; };
 		E7ECC9381C1DA6D0008A20D6 /* social12 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "social12 (2).png"; path = "../../Downloads/social12 (2).png"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E7ECC9371C1DA6D0008A20D6 /* social12 (1).png */,
+				E7A545151C2CF51B0028D066 /* mumu.png */,
 				E7ECC9381C1DA6D0008A20D6 /* social12 (2).png */,
 				E7ECC9391C1DA6D0008A20D6 /* social12.png */,
 				E76C44661C1CCE580023237A /* lights-night-dark-abstract.jpeg */,
@@ -393,6 +396,7 @@
 				E76C444F1C1C5B200023237A /* Mu-Mu--logo_white.png in Resources */,
 				E7ECC93A1C1DA6D0008A20D6 /* social12 (1).png in Resources */,
 				E7A545141C2CEE800028D066 /* multiple25.png in Resources */,
+				E7A545161C2CF51B0028D066 /* mumu.png in Resources */,
 				E76C44491C1C20360023237A /* couple-running-beach.jpg in Resources */,
 				E76C44651C1CCDEB0023237A /* couple-walking-waves.jpg in Resources */,
 				E76C44571C1CA86D0023237A /* like47.png in Resources */,
