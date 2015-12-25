@@ -17,8 +17,9 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
     let likeButton = UIButtonAnimated()
     let nopeButton = UIButtonAnimated()
     let loginButton = FBSDKLoginButton()
-//    var users:[User] = []
+    let users:[User] = []
     let userManger = UserManager.sharedInstance
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,8 +39,13 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userManger.fetchUsers()
         loginButton.delegate = self
+        userManger.fetchSwipeUsers { () -> Void in
+            print("success callback")
+            if let swipeView = self.popSwipeView(){
+                self.view.addSubview(swipeView)
+            }
+        }
 //        let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
 //        backgroundView.image = UIImage(named: "couple-running-beach.jpg")
 //        backgroundView.contentMode = UIViewContentMode.ScaleAspectFill
@@ -50,34 +56,11 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
 //        coverView.backgroundColor = UIColor.blackColor()
 //        coverView.alpha = 0.7
 //        self.view.addSubview(coverView)
-        let options = MDCSwipeToChooseViewOptions()
-        options.delegate = self
-        options.likedText = "LIKE"
-        options.likedColor = UIColor.blueColor()
-        options.nopeText = "NOPE"
-        options.onPan = { state -> Void in
-            if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Left {
-                print("Photo deleted!")
-            } else if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Right {
-                print("Photo saved!")
-            }
-        }
-        let swipeView = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
-//        let imageUrl = NSURL(string: PFUser.currentUser()!["image"] as! String)
-//        let imageData = NSData(contentsOfURL: imageUrl!)
-//        swipeView.imageView.image = UIImage(data: imageData!)
-        swipeView.imageView.image = UIImage(named: "cute_girl.jpg")
-        swipeView.imageView.frame = CGRectMake(0, 0, self.view.frame.width - 40, self.view.frame.width - 40 )
-        swipeView.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width + 30)
-        
-        let nameLabel = UILabel(frame: CGRect(x: 15, y: self.view.frame.width - 30, width: self.view.frame.width, height: 50))
-        nameLabel.text = "Megumi Kuwahara" + ",　" + "20"
 
-        swipeView.addSubview(nameLabel)
-        
-        self.view.addSubview(swipeView)
-        self.view.insertSubview(swipeView, aboveSubview: swipeView)
-        
+//        if let swipeView = popSwipeView(){
+//            self.view.addSubview(swipeView)
+//        }
+
         likeButton.setImage(UIImage(named: "like47.png"), forState: .Normal)
         nopeButton.setImage(UIImage(named: "close33.png"), forState: .Normal)
         
@@ -102,9 +85,10 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
 //        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
     }
     
+
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: "toMessageListViewController")
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "LogOut", style: UIBarButtonItemStyle.Plain, target: self, action: "logout")
     }
@@ -138,34 +122,9 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
             print("Photo saved!")
         }
         
-        
-        
-        let options = MDCSwipeToChooseViewOptions()
-        options.delegate = self
-        options.likedText = "LIKE"
-        options.likedColor = UIColor.blueColor()
-        options.nopeText = "NOPE"
-        options.onPan = { state -> Void in
-            if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Left {
-                print("Photo deleted!")
-            } else if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Right {
-                print("Photo saved!")
-            }
+        if let swipeView = popSwipeView(){
+            self.view.addSubview(swipeView)
         }
-        let swipeView = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
-        //        let imageUrl = NSURL(string: PFUser.currentUser()!["image"] as! String)
-        //        let imageData = NSData(contentsOfURL: imageUrl!)
-        //        swipeView.imageView.image = UIImage(data: imageData!)
-        swipeView.imageView.image = UIImage(named: "cute_girl.jpg")
-        swipeView.imageView.frame = CGRectMake(0, 0, self.view.frame.width - 40, self.view.frame.width - 40 )
-        swipeView.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width + 30)
-        
-        let nameLabel = UILabel(frame: CGRect(x: 15, y: self.view.frame.width - 30, width: self.view.frame.width, height: 50))
-        nameLabel.text = "Megumi Kuwahara" + ",　" + "20"
-        
-        swipeView.addSubview(nameLabel)
-        
-        self.view.addSubview(swipeView)
         
         
         
@@ -194,5 +153,35 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate, FBSDKLogi
         self.performSegueWithIdentifier("modalLoginViewController", sender: self)
     }
     
-    
+    func popSwipeView() -> MDCSwipeToChooseView?{
+        print(userManger.swipeUsers)
+        if(userManger.swipeUsers.count == 0){
+            return nil;
+        }
+        let user = userManger.swipeUsers[0]
+        userManger.swipeUsers.removeAtIndex(0)
+        let options = MDCSwipeToChooseViewOptions()
+        options.delegate = self
+        options.likedText = "LIKE"
+        options.likedColor = UIColor.blueColor()
+        options.nopeText = "NOPE"
+        options.onPan = { state -> Void in
+            if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Left {
+                print("Photo deleted!")
+            } else if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Right {
+                print("Photo saved!")
+            }
+        }
+        let swipeView = MDCSwipeToChooseView(frame: self.view.bounds, options: options)
+        let imageUrl = NSURL(string: user.image)
+        let imageData = NSData(contentsOfURL: imageUrl!)
+        swipeView.imageView.image = UIImage(data: imageData!)
+        swipeView.imageView.frame = CGRectMake(0, 0, self.view.frame.width - 40, self.view.frame.width - 40 )
+        swipeView.frame = CGRectMake(20, 100, self.view.frame.width - 40, self.view.frame.width + 30)
+        
+        let nameLabel = UILabel(frame: CGRect(x: 15, y: self.view.frame.width - 30, width: self.view.frame.width, height: 50))
+        nameLabel.text = user.username + ",　" + String(user.age)
+        swipeView.addSubview(nameLabel)
+        return swipeView
+    }
 }

@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Parse.setApplicationId("GOXbns8tXQukQqyz3fTj0uz62kUx9vA9QLwls5d4", clientKey: "s4IDEaHlc2sHVuxkO44sOewScYizAZE1FjjddrmY")
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-
         if(FBSDKAccessToken.currentAccessToken() == nil){
             print("User not Logged In")
             self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController")
